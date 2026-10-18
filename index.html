@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Tech and AI developments, what they mean for how we buy, and the sourcing plays to run next. A dated procurement briefing with a Malaysia lens.">
+<title>Procurement Tech Radar — October 2026</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23244ce6'/%3E%3Cpath d='M17 20h30M17 32h23M17 44h16' stroke='white' stroke-width='5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;450;500;550;600;650;700;750;800&display=swap" rel="stylesheet">
+<script>try { const t=localStorage.getItem('ptr-theme');document.documentElement.dataset.theme=(t==='dark'||t==='light')?t:window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';} catch (_) {document.documentElement.dataset.theme=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}</script>
+<style>:root {
+  color-scheme: light;
+  --paper: #f8f9fb;
+  --surface: #ffffff;
+  --surface-alt: #eff2f7;
+  --surface-hover: #e9edf5;
+  --ink: #191e28;
+  --muted: #596374;
+  --line: #d7dde7;
+  --line-strong: #a8b3c5;
+  --accent: #244ce6;
+  --accent-dark: #1939bd;
+  --accent-soft: #edf1ff;
+  --accent-ink: #ffffff;
+  --green: #176540;
+  --green-soft: #e7f5ed;
+  --red: #a72d36;
+  --red-soft: #fcecef;
+  --amber: #825210;
+  --amber-soft: #fff3dc;
+  --blue: #225b87;
+  --blue-soft: #e9f2fb;
+  --violet: #694093;
+  --violet-soft: #f1eafb;
+  --font: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  --body: var(--font);
+  --display: var(--font);
+  --mono: var(--font);
+  --radius: 3px;
+  --gutter: clamp(20px, 4.2vw, 64px);
+  --nav-height: 61px;
+}
+html[data-theme='dark'] {
+  color-scheme: dark;
+  --paper: #171b23;
+  --surface: #1c222d;
+  --surface-alt: #252e3d;
+  --surface-hover: #2c374a;
+  --ink: #f2f4f9;
+  --muted: #b1bed1;
+  --line: #3b4658;
+  --line-strong: #64748d;
+  --accent: #a6b8ff;
+  --accent-dark: #c2ceff;
+  --accent-soft: #273656;
+  --accent-ink: #152146;
+  --green: #a1dfb9;
+  --green-soft: #233d30;
+  --red: #ffb2bb;
+  --red-soft: #462932;
+  --amber: #f5cd87;
+  --amber-soft: #433925;
+  --blue: #acd4f6;
+  --blue-soft: #273b4e;
+  --violet: #d8b7fa;
+  --violet-soft: #3c2c50;
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: 0; }
+main { scroll-margin-top: 86px; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.65 var(--font); -webkit-font-smoothing: antialiased; }
+button, input, select { font: inherit; }
+button, a, summary { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+button { cursor: pointer; }
+button:disabled { cursor: default; }
+a { color: inherit; text-underline-offset: 4px; }
+a:hover { color: var(--accent); }
+svg { vertical-align: middle; flex-shrink: 0; max-width: 100%; }
+h1, h2, h3, h4, p { margin-top: 0; }
+h1, h2, h3, h4 { line-height: 1.2; }
+p:last-child { margin-bottom: 0; }
+strong { font-weight: 600; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+::selection { background: var(--accent); color: var(--accent-ink); }
+.shell { width: 100%; max-width: 1440px; margin-inline: auto; padding-inline: max(var(--gutter), env(safe-area-inset-left)); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.skip-link { position: fixed; z-index: 100; top: 12px; left: 20px; padding: 10px 18px; transform: translateY(-180%); background: var(--accent); color: var(--accent-ink); }
+.skip-link:focus { transform: translateY(0); }
+.topbar { min-height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-bottom: 1px solid var(--line); }
+.brand { display: inline-flex; align-items: center; gap: 12px; color: var(--ink); text-decoration: none; font-size: 16px; font-weight: 500; letter-spacing: -.2px; }
+.brand:hover { color: var(--ink); }
+.brand-symbol { width: 24px; height: 25px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 4px; flex: 0 0 24px; }
+.brand-symbol i, .brand-symbol span { display: block; height: 2px; width: 24px; background: var(--ink); }
+.brand-symbol i:nth-child(2), .brand-symbol span:nth-child(2) { width: 18px; }
+.brand-symbol i:nth-child(3), .brand-symbol span:nth-child(3) { width: 12px; background: var(--accent); }
+.top-actions { display: flex; align-items: center; gap: 11px; }
+.top-edition { color: var(--muted); margin-right: 15px; font-size: 13px; }
+.print-button, .theme-toggle { min-height: 40px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid var(--line); border-radius: 2px; background: transparent; color: var(--ink); font-size: 13px; }
+.print-button { padding: 8px 13px; }
+.theme-toggle { width: 40px; padding: 8px; }
+.print-button:hover, .theme-toggle:hover { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
+
+.hero { display: grid; grid-template-columns: minmax(0,.95fr) minmax(0,1.25fr); gap: clamp(44px, 5vw, 74px); align-items: start; padding-block: 59px 52px; }
+.hero-copy { min-width: 0; padding-top: 3px; }
+.eyebrow { display: flex; align-items: center; flex-wrap: wrap; gap: 11px; color: var(--muted); font-size: 14px; line-height: 1.5; margin-bottom: 29px; }
+.eyebrow > span { color: var(--line-strong); }
+.hero-title { margin: 0 0 25px; font-size: clamp(40px, 4.7vw, 66px); font-weight: 650; line-height: 1.02; letter-spacing: -2.8px; }
+.hero-title .title-accent { display: block; color: var(--accent); }
+.hero-description { max-width: 480px; color: var(--muted); font-size: 17px; line-height: 1.7; margin-bottom: 30px; }
+.meta-chips { display: flex; align-items: center; flex-wrap: wrap; gap: 11px 19px; color: var(--muted); font-size: 13px; line-height: 1.5; }
+.snapshot { color: var(--ink); font-weight: 500; }
+.meta-chips a { color: var(--accent); text-decoration: none; }
+.meta-chips a:hover { text-decoration: underline; }
+.cover-story { min-width: 0; padding-left: 36px; border-left: 1px solid var(--line); }
+.cover-kicker { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; color: var(--muted); font-size: 13px; line-height: 1.5; margin-bottom: 24px; }
+.cover-number { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.cover-headline { margin: 0 0 24px; max-width: 650px; font-size: clamp(28px, 2.65vw, 36px); font-weight: 550; line-height: 1.18; letter-spacing: -1.05px; }
+.commercial-flow { display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr); gap: 12px; padding-block: 19px; border-block: 1px solid var(--line); align-items: center; margin-bottom: 23px; }
+.flow-step { min-width: 0; }
+.flow-label { display: block; color: var(--muted); font-size: 12px; line-height: 1.5; margin-bottom: 7px; }
+.flow-value { display: block; color: var(--ink); font-size: 16px; font-weight: 500; line-height: 1.35; letter-spacing: -.25px; }
+.flow-value a, a.flow-value { color: var(--accent); text-decoration: none; }
+.flow-value a:hover, a.flow-value:hover { text-decoration: underline; }
+.flow-action { text-decoration: none; }
+.flow-action .flow-value { color: var(--accent); }
+.flow-action:hover .flow-value { text-decoration: underline; }
+.cover-kicker > a { color: var(--accent); text-decoration: none; margin-left: auto; font-size: 12px; white-space: nowrap; }
+.cover-kicker > a:hover { text-decoration: underline; }
+.lead-signal > .tags { margin-bottom: 18px; }
+.lead-signal > p { color: var(--muted); font-size: 17px; line-height: 1.8; margin-bottom: 24px; }
+.signal-play-link { display: inline-flex; gap: 12px; color: var(--accent); font-size: 13px; margin-top: 20px; text-decoration: none; }
+.signal-play-link:hover { text-decoration: underline; }
+.flow-arrow { color: var(--line-strong); font-size: 17px; }
+.cover-detail { color: var(--muted); font-size: 16px; line-height: 1.75; margin-bottom: 22px; }
+.cover-takeaway { padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; line-height: 1.7; color: var(--ink); }
+.cover-takeaway strong { display: block; color: var(--accent); margin-bottom: 5px; font-size: 12px; font-weight: 500; }
+.cover-takeaway p { margin-bottom: 0; }
+
+.kpi-strip { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); padding-block: 25px 27px; border-block: 1px solid var(--line-strong); scroll-margin-top: 85px; }
+.kpi { min-width: 0; padding-inline: 20px; border-left: 1px solid var(--line); }
+.kpi:first-child { border-left: 0; padding-left: 0; }
+.kpi:last-child { padding-right: 0; }
+.kpi-label { color: var(--muted); font-size: 12px; line-height: 1.5; font-weight: 400; min-height: 37px; margin-bottom: 11px; }
+.kpi-value { min-height: 38px; font-size: clamp(25px,2.25vw,32px); font-weight: 550; letter-spacing: -1.2px; line-height: 1.2; font-variant-numeric: tabular-nums; margin-bottom: 12px; white-space: nowrap; }
+.kpi-unit { font-size: 12px; font-weight: 400; color: var(--muted); letter-spacing: 0; }
+.kpi-bottom { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 8px; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.delta { display: inline-flex; align-items: center; color: var(--muted); font-size: 11px; line-height: 1.5; border-radius: 2px; padding: 1px 5px; background: var(--surface-alt); white-space: nowrap; }
+.delta.warn { color: var(--amber); background: var(--amber-soft); }
+.delta.bad { color: var(--red); background: var(--red-soft); }
+.delta.good { color: var(--green); background: var(--green-soft); }
+.section-nav { position: sticky; top: 0; z-index: 30; margin-top: 25px; background: var(--paper); border-bottom: 1px solid var(--line); }
+.nav-inner { display: flex; align-items: stretch; gap: 24px; min-height: var(--nav-height); overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none; }
+.nav-inner::-webkit-scrollbar { display: none; }
+.nav-inner a { position: relative; display: flex; align-items: center; gap: 7px; flex: 0 0 auto; padding-block: 18px; color: var(--muted); font-size: 13px; line-height: 1.5; text-decoration: none; white-space: nowrap; }
+.nav-inner a > span { color: var(--muted); font-size: 11px; }
+.nav-inner a:hover, .nav-inner a.active { color: var(--accent); }
+.nav-inner a.active::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--accent); }
+
+.briefing-section { padding-block: 54px; border-bottom: 1px solid var(--line); scroll-margin-top: 86px; }
+.section-head { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 30px; }
+.section-heading { display: flex; align-items: flex-start; gap: 15px; min-width: 0; }
+.section-number { flex-shrink: 0; margin-top: 7px; color: var(--accent); font-size: 13px; font-weight: 500; line-height: 1.5; font-variant-numeric: tabular-nums; }
+.section-heading h2 { margin: 0 0 8px; font-size: 32px; font-weight: 550; letter-spacing: -.95px; line-height: 1.2; }
+.section-intro { color: var(--muted); font-size: 15px; line-height: 1.6; margin: 0; }
+.section-count { flex-shrink: 0; color: var(--muted); font-size: 13px; white-space: nowrap; }
+.tags { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+.tag, .severity, .urgency { display: inline-flex; align-items: center; justify-content: center; padding: 2px 6px; border-radius: 2px; font-size: 11px; font-weight: 400; line-height: 1.6; white-space: nowrap; }
+.severity { text-transform: capitalize; }
+.tag.pricing, .severity.medium { color: var(--amber); background: var(--amber-soft); }
+.tag.lock-in { color: var(--violet); background: var(--violet-soft); }
+.tag.supply, .severity.watch { color: var(--blue); background: var(--blue-soft); }
+.tag.risk, .severity.high { color: var(--red); background: var(--red-soft); }
+.tag.opportunity, .severity.opportunity { color: var(--green); background: var(--green-soft); }
+.legend { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; color: var(--muted); font-size: 12px; margin-top: 23px; }
+.signal-layout { display: grid; grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr); gap: 48px; align-items: start; }
+.lead-signal { min-width: 0; padding: 23px 27px 26px 0; border-top: 2px solid var(--ink); border-right: 1px solid var(--line); }
+.signal-top { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 20px; }
+.signal-index { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.signal-context { min-width: 0; }
+.lead-signal h3 { margin-bottom: 17px; font-size: 27px; line-height: 1.2; font-weight: 500; letter-spacing: -.7px; }
+.signal-context > .tags { margin-bottom: 17px; }
+.signal-context > p { margin-bottom: 24px; color: var(--muted); font-size: 16px; line-height: 1.8; }
+.signal-list { min-width: 0; border-top: 1px solid var(--line-strong); }
+.signal-row { min-width: 0; padding-block: 22px; border-bottom: 1px solid var(--line); }
+.signal-row:first-child { padding-top: 23px; }
+.signal-row:last-child { border-bottom: 0; padding-bottom: 0; }
+.signal-row .signal-top { margin-bottom: 13px; }
+.signal-row h3 { margin-bottom: 11px; font-size: 21px; font-weight: 500; line-height: 1.3; letter-spacing: -.35px; }
+.signal-row .signal-context > .tags { margin-bottom: 12px; }
+.signal-row .signal-context > p { font-size: 15px; margin-bottom: 17px; line-height: 1.75; }
+.so-what { padding-top: 13px; border-top: 1px solid var(--line); font-size: 14px; line-height: 1.75; }
+.so-what > strong { display: block; color: var(--accent); margin-bottom: 6px; font-size: 12px; line-height: 1.5; font-weight: 500; }
+.so-what > p { color: var(--ink); margin-bottom: 0; font-size: 14px; line-height: 1.75; }
+.lead-signal .so-what { border-top-color: var(--accent); }
+.source-line { margin-top: 18px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.source-line a { margin-left: 3px; text-decoration: none; }
+.source-line a:hover { text-decoration: underline; }
+
+.panel { min-width: 0; }
+.panel-head { display: flex; justify-content: space-between; align-items: baseline; gap: 18px; margin-bottom: 25px; }
+.panel-head h3 { font-size: 20px; line-height: 1.3; font-weight: 500; letter-spacing: -.3px; margin: 0; }
+.panel-head > span { color: var(--muted); font-size: 13px; line-height: 1.5; }
+.deal-chart { padding: 27px 0 28px; border-top: 1px solid var(--line-strong); margin-bottom: 18px; }
+.chart-body { padding-right: 85px; }
+.bar-row { display: grid; grid-template-columns: 310px minmax(0,1fr); gap: 25px; align-items: center; margin-block: 22px; }
+.bar-label { min-width: 0; color: var(--ink); font-size: 14px; line-height: 1.5; }
+.bar-label small { display: block; margin-top: 3px; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.bar-track { min-width: 0; height: 17px; position: relative; background: var(--surface-alt); }
+.bar-fill { height: 100%; background: var(--accent); }
+.bar-fill.reported { background: repeating-linear-gradient(135deg,var(--accent),var(--accent) 2px,var(--accent-soft) 2px,var(--accent-soft) 5px); border: 1px solid var(--accent); }
+.bar-value { position: absolute; top: 50%; transform: translateY(-50%); padding-left: 10px; color: var(--ink); font-size: 13px; font-weight: 500; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.bar-axis { display: flex; justify-content: space-between; margin-left: 335px; border-top: 1px solid var(--line); padding-top: 10px; color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+.chart-note { color: var(--muted); font-size: 12px; line-height: 1.7; margin-top: 23px; margin-bottom: 0; }
+.cards-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); border-top: 1px solid var(--line-strong); }
+.news-card { min-width: 0; display: flex; flex-direction: column; padding: 30px 0; border-bottom: 1px solid var(--line); }
+.news-card:nth-child(odd) { padding-right: 35px; border-right: 1px solid var(--line); }
+.news-card:nth-child(even) { padding-left: 35px; }
+.card-top { display: flex; justify-content: space-between; align-items: center; gap: 14px; min-height: 20px; margin-bottom: 20px; }
+.card-index { color: var(--muted); font-size: 12px; font-weight: 400; }
+.reported-label { color: var(--amber); font-size: 12px; line-height: 1.4; text-align: right; }
+.card-title { font-size: 25px; font-weight: 500; letter-spacing: -.6px; line-height: 1.25; margin-bottom: 16px; }
+.news-card > .tags { margin-bottom: 18px; }
+.card-body { color: var(--muted); font-size: 16px; line-height: 1.8; margin-bottom: 25px; }
+.news-card > .so-what { margin-top: auto; border-top-color: var(--line-strong); }
+.news-card > .source-line { margin-top: 18px; }
+.prices-panel { margin-top: 34px; padding-top: 29px; border-top: 1px solid var(--line-strong); }
+.table-wrap { min-width: 0; max-width: 100%; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent; }
+table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; line-height: 1.7; }
+th, td { padding: 20px; vertical-align: top; border-bottom: 1px solid var(--line); font-weight: 400; }
+thead th { padding-block: 13px; border-block: 1px solid var(--line-strong); color: var(--muted); font-size: 12px; font-weight: 500; background: var(--surface-alt); }
+tbody th { color: var(--ink); font-weight: 500; }
+tbody td { color: var(--muted); }
+tbody tr:hover > * { background: var(--surface-hover); }
+.number { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.number { color: var(--ink); font-weight: 500; }
+.prices-panel table { min-width: 620px; }
+.prices-panel th:first-child { width: 26%; }
+.editorial-note { color: var(--muted); font-size: 13px; line-height: 1.7; margin-top: -10px; margin-bottom: 23px; }
+.vendor-table { min-width: 1100px; table-layout: fixed; }
+.vendor-table th:nth-child(1) { width: 16%; }
+.vendor-table th:nth-child(2) { width: 10%; }
+.vendor-table th:nth-child(3) { width: 30%; }
+.vendor-table th:nth-child(4) { width: 17%; }
+.vendor-table th:nth-child(5) { width: 27%; }
+.vendor-table thead th:first-child, .vendor-table tbody th { position: sticky; left: 0; z-index: 1; background: var(--paper); border-right: 1px solid var(--line); }
+.vendor-table thead th:first-child { background: var(--surface-alt); z-index: 2; }
+.vendor-table tbody tr:hover th { background: var(--surface-hover); }
+.reported-note { display: block; color: var(--amber); font-size: 12px; line-height: 1.6; margin-top: 8px; }
+
+.plays-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); column-gap: 38px; }
+.play-card { min-width: 0; position: relative; padding: 26px 0 29px; border-top: 1px solid var(--line-strong); scroll-margin-top: 86px; }
+.play-card:target { outline: 2px solid var(--accent); outline-offset: 9px; }
+.play-top { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 17px; }
+.play-id { color: var(--accent); font-size: 29px; line-height: 1; font-weight: 500; letter-spacing: -.8px; }
+.urgency { color: var(--muted); font-size: 12px; background: var(--surface-alt); padding: 2px 7px; }
+.urgency.now { color: var(--red); background: var(--red-soft); }
+.play-card h3 { max-width: 430px; font-size: 23px; line-height: 1.25; letter-spacing: -.5px; font-weight: 500; margin-bottom: 12px; }
+.play-why { color: var(--muted); font-size: 15px; line-height: 1.7; margin-bottom: 18px; }
+.play-card ul { padding: 0 0 0 18px; margin: 0; font-size: 14px; line-height: 1.8; }
+.play-card li + li { margin-top: 9px; }
+.play-card li::marker { color: var(--accent); }
+.calendar-list { border-top: 1px solid var(--line-strong); }
+.calendar-row { display: grid; grid-template-columns: 165px minmax(0,1fr) 125px; align-items: start; gap: 25px; padding-block: 24px; border-bottom: 1px solid var(--line); }
+.calendar-row:last-child { border-bottom: 0; }
+.calendar-date { color: var(--ink); font-size: 15px; font-weight: 500; font-variant-numeric: tabular-nums; }
+.calendar-text { color: var(--muted); font-size: 15px; line-height: 1.75; margin: 0; }
+.countdown { justify-self: end; color: var(--accent); font-size: 13px; line-height: 1.5; white-space: nowrap; padding-top: 3px; font-variant-numeric: tabular-nums; }
+.countdown.passed { color: var(--muted); }
+.region-grid { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(0,1fr); gap: 38px; align-items: start; }
+.capacity-panel, .bill-panel { padding-top: 25px; border-top: 1px solid var(--line-strong); }
+.bill-panel { padding-left: 34px; border-left: 1px solid var(--line); }
+.capacity-total { margin-block: 28px 23px; }
+.capacity-total > strong { font-size: 50px; font-weight: 500; line-height: 1.1; letter-spacing: -1.7px; font-variant-numeric: tabular-nums; }
+.capacity-total > strong > span { color: var(--muted); font-size: 20px; font-weight: 400; letter-spacing: 0; }
+.capacity-total > p { color: var(--muted); font-size: 14px; line-height: 1.5; margin: 7px 0 0; }
+.stacked-bar { display: flex; height: 29px; gap: 2px; overflow: hidden; }
+.stack-segment { height: 100%; min-width: 0; flex-shrink: 1; }
+.operational { background: var(--accent); }
+.construction { background: #8fa9ff; }
+.planning { background: #d7e1ff; }
+.stack-legend { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; margin: 17px 0 0; }
+.stack-legend > div { min-width: 0; }
+.stack-legend dt { display: flex; align-items: flex-start; gap: 6px; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.stack-legend i { width: 7px; height: 7px; display: inline-block; flex-shrink: 0; margin-top: 6px; }
+.stack-legend dd { color: var(--ink); margin: 7px 0 0 13px; font-size: 15px; font-weight: 500; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.capacity-panel > .chart-note { margin-top: 16px; }
+.malaysia-capacity { padding-top: 25px; margin-top: 27px; border-top: 1px solid var(--line); }
+.malaysia-capacity h3 { font-size: 18px; font-weight: 500; margin-bottom: 23px; }
+.capacity-row { margin-bottom: 20px; }
+.capacity-row > div:first-child { display: flex; align-items: baseline; justify-content: space-between; gap: 15px; color: var(--muted); font-size: 13px; margin-bottom: 9px; }
+.capacity-row strong { color: var(--ink); font-size: 14px; font-weight: 500; font-variant-numeric: tabular-nums; }
+.capacity-row .bar-track { height: 14px; }
+.capacity-row:nth-child(2) .bar-fill { background: repeating-linear-gradient(135deg,var(--accent),var(--accent) 3px,var(--accent-soft) 3px,var(--accent-soft) 5px); }
+.capacity-axis { display: flex; justify-content: space-between; border-top: 1px solid var(--line); padding-top: 9px; color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+.malaysia-capacity .chart-note { margin-top: 11px; }
+.region-points { color: var(--muted); font-size: 15px; line-height: 1.8; margin: 25px 0; padding-left: 18px; }
+.region-points li + li { margin-top: 12px; }
+.bill-panel .panel-head { align-items: center; flex-wrap: wrap; }
+.bill-steps { padding: 0; list-style: none; margin: 28px 0; }
+.bill-step { position: relative; display: flex; align-items: flex-start; gap: 14px; padding-bottom: 24px; }
+.bill-step:not(:last-child)::before { content: ''; position: absolute; width: 1px; left: 13px; top: 29px; bottom: 4px; background: var(--line); }
+.step-mark { position: relative; flex-shrink: 0; display: grid; place-items: center; width: 27px; height: 27px; border-radius: 50%; font-size: 13px; line-height: 1; color: var(--green); background: var(--green-soft); }
+.bill-step.next .step-mark { color: var(--amber); background: var(--amber-soft); }
+.bill-step > div { display: flex; flex-direction: column; gap: 4px; }
+.bill-step strong { font-size: 15px; line-height: 1.5; font-weight: 500; }
+.bill-step > div > span { color: var(--muted); font-size: 13px; line-height: 1.5; }
+.bill-summary { color: var(--muted); font-size: 15px; line-height: 1.85; margin-bottom: 26px; }
+
+.learn-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 43px; align-items: start; }
+.glossary-list { border-top: 1px solid var(--line-strong); }
+.glossary-list > .panel-head { padding-block: 22px; margin: 0; border-bottom: 1px solid var(--line); }
+.glossary-list details { border-bottom: 1px solid var(--line); }
+.glossary-list summary { display: flex; align-items: center; gap: 15px; min-height: 60px; padding-block: 17px; cursor: pointer; list-style: none; font-size: 16px; line-height: 1.5; }
+.glossary-list summary::-webkit-details-marker { display: none; }
+.glossary-list summary:hover { color: var(--accent); }
+.glossary-index { color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+.glossary-plus { margin-left: auto; color: var(--muted); font-size: 22px; line-height: 1; }
+.glossary-list details[open] .glossary-plus { transform: rotate(45deg); }
+.glossary-list details > p { margin: 0; padding: 0 22px 21px 31px; color: var(--muted); font-size: 15px; line-height: 1.8; }
+.quiz-panel { min-width: 0; padding: 28px 29px; border: 1px solid var(--line); border-top: 2px solid var(--ink); background: var(--surface); }
+.quiz-header { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+.quiz-kicker { color: var(--accent); font-size: 13px; font-weight: 500; line-height: 1.5; }
+.quiz-score { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.quiz-progress { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 6px; margin: 22px 0 29px; }
+.quiz-segment { height: 3px; background: var(--line); }
+.quiz-segment.current { background: var(--accent); }
+.quiz-segment.right { background: var(--green); }
+.quiz-segment.wrong { background: var(--red); }
+.quiz-counter { color: var(--muted); font-size: 12px; margin-bottom: 12px; font-variant-numeric: tabular-nums; }
+.quiz-question { font-size: 26px; line-height: 1.3; font-weight: 500; letter-spacing: -.55px; margin-bottom: 24px; }
+.quiz-question:focus:not(:focus-visible) { outline: none; }
+.quiz-options { display: grid; gap: 10px; }
+.quiz-option { display: grid; grid-template-columns: 21px minmax(0,1fr) auto; gap: 12px; align-items: center; min-height: 53px; padding: 12px 14px; text-align: left; border: 1px solid var(--line-strong); border-radius: 2px; background: var(--surface); color: var(--ink); font-size: 14px; line-height: 1.6; }
+.quiz-option:hover:not(:disabled) { background: var(--accent-soft); border-color: var(--accent); }
+.option-letter { color: var(--muted); font-size: 12px; }
+.quiz-option:disabled { opacity: 1; }
+.quiz-option.correct { color: var(--green); background: var(--green-soft); border-color: var(--green); }
+.quiz-option.incorrect { color: var(--red); background: var(--red-soft); border-color: var(--red); }
+.quiz-option.correct .option-letter, .quiz-option.incorrect .option-letter { color: inherit; }
+.answer-icon { font-size: 18px; line-height: 1; }
+.quiz-feedback:empty { display: none; }
+.quiz-feedback { margin-top: 20px; padding-top: 17px; border-top: 1px solid var(--line); color: var(--ink); font-size: 14px; line-height: 1.8; }
+.quiz-feedback strong { display: block; margin-bottom: 4px; font-weight: 500; }
+.quiz-feedback p { margin: 0; color: var(--muted); }
+.quiz-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 26px; }
+.quiz-toolbar > span { color: var(--muted); font-size: 12px; }
+.button { display: inline-flex; align-items: center; justify-content: center; gap: 15px; min-height: 44px; padding: 10px 16px; color: var(--accent-ink); border: 1px solid var(--accent); border-radius: 2px; background: var(--accent); font-size: 13px; font-weight: 400; white-space: nowrap; text-decoration: none; }
+.button:hover:not(:disabled) { background: var(--accent-dark); border-color: var(--accent-dark); }
+.button:disabled { color: var(--muted); background: var(--surface-alt); border-color: var(--line); }
+.quiz-result-icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; margin: 31px 0 23px; color: var(--green); background: var(--green-soft); font-size: 24px; }
+.quiz-result-copy { color: var(--muted); font-size: 15px; line-height: 1.8; margin-bottom: 26px; }
+.sources-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); column-gap: 28px; list-style: none; padding: 0; margin: 0; }
+.sources-grid > li { min-width: 0; border-top: 1px solid var(--line); scroll-margin-top: 86px; }
+.sources-grid a { display: grid; grid-template-columns: 22px minmax(0,1fr) 14px; gap: 10px; align-items: start; min-height: 82px; padding-block: 17px; font-size: 13px; line-height: 1.7; text-decoration: none; }
+.sources-grid a:hover > span:nth-child(2) { text-decoration: underline; }
+.source-number { color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+.sources-grid a > span:last-child { color: var(--accent); }
+footer { padding-block: 30px 36px; }
+.footer-inner { display: flex; justify-content: space-between; align-items: baseline; gap: 35px; }
+.footer-brand { font-size: 16px; font-weight: 500; letter-spacing: -.2px; text-decoration: none; }
+.footer-brand > span { display: none; }
+.footer-inner p { max-width: 800px; margin: 10px 0 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+.back-top { color: var(--accent); font-size: 13px; text-decoration: none; white-space: nowrap; }
+.back-top:hover { text-decoration: underline; }
+.noscript-note { padding: 16px 20px; text-align: center; color: var(--ink); font-size: 14px; background: var(--surface-alt); }
+
+@media (max-width: 1180px) {
+  :root { --gutter: 35px; }
+  .hero { gap: 40px; grid-template-columns: minmax(0,.95fr) minmax(0,1.15fr); padding-block: 45px; }
+  .hero-title { font-size: clamp(42px,5.2vw,59px); letter-spacing: -2.5px; }
+  .hero-description { font-size: 16px; }
+  .cover-story { padding-left: 28px; }
+  .cover-headline { font-size: 31px; }
+  .commercial-flow { gap: 8px; }
+  .flow-value { font-size: 15px; }
+  .cover-detail { font-size: 15px; }
+  .kpi-strip { grid-template-columns: repeat(3,minmax(0,1fr)); row-gap: 27px; }
+  .kpi:nth-child(4) { border-left: 0; padding-left: 0; }
+  .kpi:nth-child(3) { padding-right: 0; }
+  .kpi-label { min-height: 0; }
+  .kpi-value { font-size: 32px; }
+  .signal-layout { gap: 32px; }
+  .lead-signal { padding-right: 23px; }
+  .bar-row { grid-template-columns: 265px minmax(0,1fr); gap: 20px; }
+  .bar-axis { margin-left: 285px; }
+  .region-grid { grid-template-columns: 1fr; gap: 37px; }
+  .bill-panel { border-left: 0; padding-left: 0; }
+  .learn-grid { gap: 30px; }
+  .quiz-panel { padding: 25px; }
+  .sources-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 850px) {
+  .hero { grid-template-columns: 1fr; gap: 37px; }
+  .hero-title { font-size: 60px; letter-spacing: -2.5px; }
+  .hero-description { max-width: 600px; font-size: 17px; margin-bottom: 24px; }
+  .eyebrow { margin-bottom: 22px; }
+  .cover-story { padding: 28px 0 0; border-left: 0; border-top: 1px solid var(--line-strong); }
+  .cover-kicker { margin-bottom: 18px; }
+  .cover-headline { max-width: 620px; font-size: 34px; }
+  .cover-detail { font-size: 16px; }
+  .commercial-flow { gap: 18px; }
+  .flow-value { font-size: 17px; }
+  .flow-label { font-size: 13px; }
+  .section-count { display: none; }
+  .signal-layout { grid-template-columns: 1fr; gap: 30px; }
+  .lead-signal { border-right: 0; padding-right: 0; padding-bottom: 0; }
+  .lead-signal h3 { max-width: 540px; }
+  .signal-row .signal-context > p { font-size: 16px; }
+  .bar-row { grid-template-columns: 230px minmax(0,1fr); gap: 18px; }
+  .bar-axis { margin-left: 248px; }
+  .chart-body { padding-right: 78px; }
+  .news-card:nth-child(odd) { padding-right: 23px; }
+  .news-card:nth-child(even) { padding-left: 23px; }
+  .card-title { font-size: 23px; }
+  .card-body { font-size: 15px; }
+  .calendar-row { grid-template-columns: 140px minmax(0,1fr); gap: 8px 22px; }
+  .countdown { grid-column: 2; justify-self: start; padding-top: 0; }
+  .learn-grid { grid-template-columns: 1fr; gap: 35px; }
+  .quiz-panel { max-width: none; }
+  .panel-head { flex-wrap: wrap; align-items: baseline; gap: 9px; }
+}
+@media (max-width: 640px) {
+  :root { --gutter: 20px; --nav-height: 56px; }
+  .topbar { min-height: 71px; gap: 12px; }
+  .brand { font-size: 14px; gap: 10px; }
+  .brand-caption { max-width: 140px; line-height: 1.4; }
+  .top-edition { display: none; }
+  .top-actions { gap: 7px; }
+  .print-button { width: 37px; min-height: 38px; padding: 8px; font-size: 0; }
+  .print-button svg { width: 17px; height: 17px; }
+  .theme-toggle { width: 37px; min-height: 38px; }
+  .hero { padding-block: 33px; gap: 30px; }
+  .eyebrow { font-size: 13px; margin-bottom: 23px; }
+  .hero-title { font-size: clamp(41px,11.8vw,60px); letter-spacing: -2px; line-height: 1.02; margin-bottom: 21px; }
+  .hero-description { font-size: 16px; line-height: 1.75; margin-bottom: 23px; }
+  .meta-chips { gap: 9px 14px; font-size: 12px; }
+  .cover-story { padding-top: 23px; }
+  .cover-kicker { font-size: 12px; margin-bottom: 17px; }
+  .cover-headline { font-size: 29px; letter-spacing: -.8px; margin-bottom: 22px; }
+  .commercial-flow { display: grid; grid-template-columns: 1fr; gap: 14px; padding-block: 17px; margin-bottom: 21px; }
+  .flow-step { display: grid; grid-template-columns: 105px minmax(0,1fr); column-gap: 15px; align-items: baseline; }
+  .flow-label { margin: 0; font-size: 12px; }
+  .flow-value { font-size: 16px; }
+  .flow-arrow { display: none; }
+  .cover-detail { font-size: 15px; line-height: 1.8; }
+  .cover-takeaway { font-size: 14px; }
+  .kpi-strip { grid-template-columns: repeat(2,minmax(0,1fr)); row-gap: 25px; padding-block: 24px; }
+  .kpi { padding-inline: 17px; border-left: 0; }
+  .kpi:nth-child(odd) { padding-left: 0; border-right: 1px solid var(--line); }
+  .kpi:nth-child(even) { padding-left: 17px; padding-right: 0; }
+  .kpi:nth-child(4) { padding-left: 17px; }
+  .kpi-label { min-height: 36px; font-size: 12px; line-height: 1.5; margin-bottom: 10px; }
+  .kpi-value { min-height: 31px; font-size: 28px; line-height: 1.15; letter-spacing: -.9px; white-space: normal; margin-bottom: 12px; }
+  .kpi-unit { display: inline-block; font-size: 12px; }
+  .kpi-bottom { font-size: 11px; gap: 5px 7px; }
+  .delta { font-size: 10px; }
+  .section-nav { margin-top: 16px; }
+  .nav-inner { gap: 22px; }
+  .nav-inner a { padding-block: 17px; font-size: 13px; }
+  .briefing-section { padding-block: 37px; }
+  .section-head { margin-bottom: 25px; }
+  .section-heading { gap: 11px; }
+  .section-number { margin-top: 5px; font-size: 12px; }
+  .section-heading h2 { font-size: 27px; letter-spacing: -.65px; }
+  .section-intro { font-size: 14px; }
+  .lead-signal { padding-top: 23px; }
+  .lead-signal h3 { font-size: 26px; }
+  .signal-context > p, .signal-row .signal-context > p { font-size: 15px; line-height: 1.8; }
+  .signal-row h3 { font-size: 21px; }
+  .signal-row { padding-block: 23px; }
+  .signal-top { margin-bottom: 16px; }
+  .so-what > p { font-size: 14px; }
+  .legend { font-size: 12px; }
+  .source-line { font-size: 12px; }
+  .deal-chart { padding-top: 23px; }
+  .panel-head h3 { font-size: 19px; }
+  .panel-head > span { font-size: 12px; }
+  .bar-row { grid-template-columns: 1fr; gap: 10px; margin-block: 22px; }
+  .bar-label { font-size: 14px; }
+  .bar-label small { font-size: 12px; }
+  .bar-track { height: 16px; }
+  .bar-value { font-size: 12px; padding-left: 8px; }
+  .chart-body { padding-right: 76px; }
+  .bar-axis { margin-left: 0; font-size: 11px; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .news-card, .news-card:nth-child(odd), .news-card:nth-child(even) { padding: 26px 0; border-right: 0; }
+  .card-title { font-size: 25px; }
+  .card-body { font-size: 16px; }
+  .card-top { margin-bottom: 17px; }
+  .card-index, .reported-label { font-size: 12px; }
+  .prices-panel { margin-top: 27px; }
+  .editorial-note { font-size: 13px; }
+  th, td { padding: 16px; }
+  .plays-grid { grid-template-columns: 1fr; }
+  .play-card { padding-block: 24px 27px; }
+  .play-id { font-size: 28px; }
+  .play-card h3 { font-size: 23px; }
+  .play-why { font-size: 15px; }
+  .play-card ul { font-size: 14px; }
+  .calendar-row { grid-template-columns: minmax(0,1fr) auto; gap: 11px 15px; padding-block: 22px; }
+  .calendar-date { grid-column: 1; grid-row: 1; font-size: 14px; }
+  .calendar-text { grid-column: 1 / -1; grid-row: 2; font-size: 15px; }
+  .countdown { grid-column: 2; grid-row: 1; justify-self: end; font-size: 12px; padding-top: 0; }
+  .region-grid { gap: 33px; }
+  .capacity-panel, .bill-panel { padding-top: 23px; }
+  .capacity-total > strong { font-size: 44px; }
+  .stack-legend { grid-template-columns: 1fr; gap: 11px; }
+  .stack-legend > div { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+  .stack-legend dt { font-size: 13px; align-items: center; }
+  .stack-legend i { margin-top: 0; }
+  .stack-legend dd { margin: 0; font-size: 14px; }
+  .capacity-axis { font-size: 11px; }
+  .bill-step strong { font-size: 15px; }
+  .bill-step > div > span { font-size: 13px; }
+  .region-points, .bill-summary { font-size: 15px; }
+  .glossary-list summary { font-size: 15px; gap: 12px; }
+  .glossary-list details > p { padding-left: 27px; font-size: 15px; }
+  .quiz-panel { padding: 23px 20px; }
+  .quiz-header { gap: 10px; }
+  .quiz-kicker, .quiz-score { font-size: 12px; }
+  .quiz-question { font-size: 24px; letter-spacing: -.45px; }
+  .quiz-option { min-height: 53px; padding: 11px 12px; gap: 9px; font-size: 14px; }
+  .quiz-toolbar { flex-wrap: wrap; gap: 15px; }
+  .quiz-toolbar > .button { margin-left: auto; }
+  .button { min-height: 44px; font-size: 13px; }
+  .sources-grid { grid-template-columns: 1fr; }
+  .sources-grid a { min-height: 0; padding-block: 18px; font-size: 13px; }
+  .footer-inner { flex-direction: column; align-items: flex-start; gap: 21px; }
+  .footer-inner p { font-size: 12px; }
+  footer { padding-bottom: max(30px, env(safe-area-inset-bottom)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+@media print {
+  @page { size: A4; margin: 14mm 13mm; }
+  :root, html[data-theme='dark'] { color-scheme: light; --paper:#fff; --surface:#fff; --surface-alt:#f1f3f7; --ink:#191e28; --muted:#4c5668; --line:#cfd5df; --line-strong:#a8b3c5; --accent:#244ce6; --accent-soft:#edf1ff; --accent-ink:#fff; --green:#176540; --green-soft:#e7f5ed; --red:#a72d36; --red-soft:#fcecef; --amber:#825210; --amber-soft:#fff3dc; --blue:#225b87; --blue-soft:#e9f2fb; --violet:#694093; --violet-soft:#f1eafb; }
+  body { background:#fff; font-size:10px; line-height:1.55; }
+  .shell { max-width:none; padding:0; }
+  .topbar { min-height:42px; }
+  .brand { font-size:12px; }
+  .top-actions, .section-nav, .skip-link, .quiz-panel, .back-top, .noscript-note { display:none!important; }
+  .hero { grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); gap:25px; padding-block:27px; }
+  .hero-title { font-size:39px; letter-spacing:-1.6px; }
+  .hero-description { font-size:11px; margin-bottom:18px; }
+  .eyebrow { font-size:10px; margin-bottom:17px; }
+  .meta-chips { font-size:9px; gap:8px 12px; }
+  .cover-story { border-top:0; border-left:1px solid var(--line); padding:0 0 0 20px; }
+  .cover-kicker { font-size:9px; margin-bottom:15px; }
+  .cover-headline { font-size:23px; letter-spacing:-.6px; }
+  .commercial-flow { display:grid; grid-template-columns:1fr; gap:9px; padding-block:13px; margin-bottom:14px; }
+  .flow-step { display:grid; grid-template-columns:80px minmax(0,1fr); gap:12px; }
+  .flow-label { font-size:9px; margin:0; }
+  .flow-value { font-size:11px; }
+  .flow-arrow { display:none; }
+  .cover-detail, .cover-takeaway { font-size:10px; line-height:1.7; }
+  .cover-takeaway strong { font-size:9px; }
+  .kpi-strip { grid-template-columns:repeat(3,minmax(0,1fr)); row-gap:17px; padding-block:18px; }
+  .kpi:nth-child(4) { border-left:0; padding-left:0; }
+  .kpi-label { min-height:0; font-size:9px; }
+  .kpi-value { min-height:0; font-size:25px; }
+  .kpi-unit, .kpi-bottom, .delta { font-size:9px; }
+  .briefing-section { padding-block:25px; }
+  .section-head { margin-bottom:20px; }
+  .section-heading h2 { font-size:23px; }
+  .section-number, .section-intro { font-size:10px; }
+  .section-count { display:none; }
+  .signal-layout { grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); gap:25px; }
+  .lead-signal { border-right:1px solid var(--line); padding:20px 20px 0 0; }
+  .lead-signal h3 { font-size:22px; }
+  .signal-context>p, .signal-row .signal-context>p { font-size:10px; line-height:1.7; }
+  .signal-row { padding-block:17px; }
+  .signal-row h3 { font-size:15px; }
+  .so-what>strong, .source-line { font-size:8px; }
+  .so-what>p { font-size:10px; }
+  .tag, .severity { font-size:8px; }
+  .cards-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .news-card { break-inside:avoid; padding-block:20px; }
+  .news-card:nth-child(odd) { padding-right:20px; border-right:1px solid var(--line); }
+  .news-card:nth-child(even) { padding-left:20px; }
+  .card-title { font-size:18px; }
+  .card-body { font-size:10px; }
+  .card-index, .reported-label { font-size:9px; }
+  .table-wrap { overflow:visible!important; }
+  .vendor-table { min-width:0; table-layout:fixed; }
+  table, .table-wrap table { font-size:9px; }
+  th, td { padding:9px 7px; overflow-wrap:anywhere; }
+  thead th { font-size:8px; }
+  .vendor-table thead th:first-child, .vendor-table tbody th { position:static; }
+  .prices-panel table { min-width:0; }
+  .deal-chart { break-inside:avoid; }
+  .chart-body { padding-right:60px; }
+  .bar-row { grid-template-columns:200px minmax(0,1fr); gap:15px; margin-block:15px; }
+  .bar-label { font-size:10px; }
+  .bar-label small { font-size:9px; }
+  .bar-value { font-size:9px; }
+  .bar-axis { margin-left:215px; font-size:9px; }
+  .chart-note, .panel-head>span { font-size:9px; }
+  .panel-head h3 { font-size:15px; }
+  .plays-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 25px; }
+  .play-card { padding-block:20px; break-inside:avoid; }
+  .play-id { font-size:23px; }
+  .play-card h3 { font-size:17px; }
+  .play-why, .play-card ul { font-size:10px; }
+  .urgency { font-size:9px; }
+  .calendar-row { grid-template-columns:100px minmax(0,1fr) 80px; gap:18px; padding-block:15px; break-inside:avoid; }
+  .calendar-date, .calendar-text, .countdown { grid-column:auto; grid-row:auto; font-size:10px; }
+  .countdown { justify-self:end; }
+  .region-grid { grid-template-columns:1fr; gap:25px; }
+  .bill-panel { border-left:0; padding-left:0; }
+  .capacity-panel, .bill-panel { break-inside:avoid; }
+  .capacity-total>strong { font-size:35px; }
+  .region-points, .bill-summary, .bill-step strong { font-size:10px; }
+  .bill-step>div>span { font-size:9px; }
+  .learn-grid { display:block; }
+  .glossary-list details { break-inside:avoid; }
+  .glossary-list summary { min-height:0; font-size:11px; padding-block:12px 6px; }
+  .glossary-plus { display:none; }
+  .glossary-list details>p { display:block!important; padding-bottom:12px; font-size:10px; }
+  .glossary-list details::details-content { display:block; content-visibility:visible!important; }
+  .sources-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 20px; }
+  .sources-grid a { min-height:0; font-size:9px; padding-block:11px; }
+  .source-number { font-size:8px; }
+  .sources-grid li { break-inside:avoid; }
+  footer { padding-block:20px; }
+  .footer-inner p { font-size:9px; }
+  h2, h3 { break-after:avoid; }
+  * { -webkit-print-color-adjust:exact; print-color-adjust:exact; box-shadow:none!important; }
+}
+</style>
+</head>
+<body><div id="briefing-root">
+<a class="skip-link" href="#main">Skip to briefing</a>
+<header id="cover" class="shell">
+ <div class="topbar"><a class="brand" href="#cover" aria-label="Procurement Tech Radar home"><span class="brand-symbol" aria-hidden="true"><i></i><i></i><i></i></span><span class="brand-caption">The procurement briefing</span></a><div class="top-actions"><span class="top-edition">October 2026</span><button id="print-button" class="print-button" type="button"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4V9h16v9h-2M6 14h12v7H6z"/></svg> Print briefing</button><button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.5 13.1A8.5 8.5 0 0 1 10.9 3.5a8.5 8.5 0 1 0 9.6 9.6Z"/></svg></button></div></div>
+ <div class="hero"><div class="hero-copy"><div class="eyebrow">Technology, AI & the way we buy</div><h1 class="hero-title">Procurement<br><span class="title-accent">Tech Radar<span class="title-dot">.</span></span></h1><p class="hero-description">Tech and AI developments, what they mean for how we buy, and the sourcing plays to run next.</p><div class="meta-chips"><span class="snapshot">As of 17 Oct 2026</span><span>Global + Malaysia</span><a href="#sources">23 sources <span aria-hidden="true">↗</span></a></div></div>
+ <article class="cover-story"><div class="cover-kicker"><span class="cover-number">01</span><span>The commercial shift</span><a href="#signals" aria-label="Read all five market signals">Explore signals <span aria-hidden="true">↗</span></a></div><h2 class="cover-headline">Software pricing moves from seats to credits</h2><div class="commercial-flow" aria-label="Market move: seats to credits. Commercial exposure: uncapped consumption. Sourcing play: guardrails on consumption pricing."><div class="flow-step"><span class="flow-label">Market move</span><span class="flow-value">Seats <span aria-hidden="true">→</span> credits</span></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step"><span class="flow-label">Commercial exposure</span><span class="flow-value">Uncapped<br>consumption</span></div><span class="flow-arrow" aria-hidden="true">→</span><a class="flow-step flow-action" href="#P1"><span class="flow-label">Your next play</span><span class="flow-value">Guardrails on<br>consumption pricing <span aria-hidden="true">↗</span></span></a></div><p class="cover-detail">Microsoft now bills Copilot agent work by usage. Gartner expects at least 40% of enterprise SaaS spend to move to usage, agent or outcome pricing by 2030.</p><div class="cover-takeaway"><strong>So what for procurement</strong><p>Hard spend caps; alerts at 50/80/100%; agents stop rather than bill overage.</p></div></article></div>
+ <section id="numbers" class="kpi-strip" aria-label="Six headline figures"><article class="kpi"><h2 class="kpi-label">Tech M&amp;A, YTD to 15 Oct</h2><div class="kpi-value">$901.6B</div><div class="kpi-bottom"><span class="delta warn">+38% YoY</span><span>consolidation</span></div></article><article class="kpi"><h2 class="kpi-label">DRAM contract price, Q4</h2><div class="kpi-value">+10–15%</div><div class="kpi-bottom"><span class="delta bad">QoQ</span><span>TrendForce</span></div></article><article class="kpi"><h2 class="kpi-label">NAND contract price, Q4</h2><div class="kpi-value">+15–20%</div><div class="kpi-bottom"><span class="delta bad">QoQ</span><span>tight into 2027</span></div></article><article class="kpi"><h2 class="kpi-label">Claude Haiku 5.5 input</h2><div class="kpi-value">$0.10<small class="kpi-unit"> / M tokens</small></div><div class="kpi-bottom"><span class="delta good">~−75%</span><span>vs Haiku 4.5</span></div></article><article class="kpi"><h2 class="kpi-label">US firms paying for AI</h2><div class="kpi-value">55.9%</div><div class="kpi-bottom"><span class="delta neutral">flat spend</span><span>Ramp, Oct</span></div></article><article class="kpi"><h2 class="kpi-label">Johor DC capacity, operational</h2><div class="kpi-value">1,110<small class="kpi-unit"> MW</small></div><div class="kpi-bottom"><span class="delta neutral">4,198 MW</span><span>incl. pipeline</span></div></article></section>
+</header>
+<nav class="section-nav" aria-label="Briefing sections"><div class="nav-inner shell"><a href="#cover" class="active" aria-current="location">Overview</a><a href="#numbers" >Numbers</a><a href="#signals" >Signals</a><a href="#deals" >Deal flow</a><a href="#ai" >AI & GenAI</a><a href="#vendors" >Vendor watch</a><a href="#playbook" >Playbook</a><a href="#calendar" >Calendar</a><a href="#malaysia" >Malaysia</a><a href="#learn" >Learn</a><a href="#sources" >Sources</a><a href="#notes" >Notes</a></div></nav>
+<main id="main" class="shell">
+ <section id="signals" class="briefing-section"><div class="section-head"><div class="section-heading"><span class="section-number">01</span><div><h2>The signal board</h2><p class="section-intro">Five shifts shaping your next sourcing decision.</p></div></div><span class="section-count">Executive summary</span></div>
+ <div class="signal-layout"><article class="lead-signal"><div class="signal-top"><span class="signal-index">01 / Lead signal</span><span class="severity high">high</span></div><h3>Software pricing moves from seats to credits</h3><div class="tags"><span class="tag pricing">Pricing</span><span class="tag risk">Risk</span></div><p>Microsoft now bills Copilot agent work by usage. Gartner expects at least 40% of enterprise SaaS spend to move to usage, agent or outcome pricing by 2030.</p><div class="so-what"><strong>So what for procurement</strong><p>Hard spend caps; alerts at 50/80/100%; agents stop rather than bill overage.</p></div><a class="signal-play-link" href="#P1">Run play P1 <span aria-hidden="true">↗</span></a></article><div class="signal-list"><article class="signal-row"><div class="signal-top"><span class="signal-index">02</span><span class="severity high">high</span></div><div class="signal-context"><h3>Hardware costs keep climbing</h3><div class="tags"><span class="tag supply">Supply</span><span class="tag pricing">Pricing</span></div><p>Memory prices rise again in Q4 with supply tight into 2027. Servers and laptops carry the cost.</p></div><div class="so-what"><strong>So what for procurement</strong><p>Lock Q4/Q1 pricing on framework agreements.</p></div></article><article class="signal-row"><div class="signal-top"><span class="signal-index">03</span><span class="severity medium">medium</span></div><div class="signal-context"><h3>Consolidation is accelerating</h3><div class="tags"><span class="tag lock-in">Lock-in</span><span class="tag pricing">Pricing</span></div><p>Tech M&amp;A reached $901.6B through 15 Oct, up 38%. Security, data and AI vendors are being absorbed, changing roadmaps, support and renewal terms.</p></div><div class="so-what"><strong>So what for procurement</strong><p>Change-of-control: terminate or freeze price.</p></div></article><article class="signal-row"><div class="signal-top"><span class="signal-index">04</span><span class="severity medium">medium</span></div><div class="signal-context"><h3>Malaysia&#39;s AI law is close</h3><div class="tags"><span class="tag risk">Risk</span></div><p>The AI Governance Bill heads to Parliament in Nov–Dec 2026 and covers AI used by deployers in Malaysia wherever it is hosted.</p></div><div class="so-what"><strong>So what for procurement</strong><p>Inventory AI systems incl. features inside SaaS.</p></div></article><article class="signal-row"><div class="signal-top"><span class="signal-index">05</span><span class="severity opportunity">opportunity</span></div><div class="signal-context"><h3>AI unit prices are falling fast</h3><div class="tags"><span class="tag opportunity">Opportunity</span><span class="tag pricing">Pricing</span></div><p>Claude Haiku 5.5 runs about 75% cheaper than its predecessor. Use falling prices to renegotiate committed spend.</p></div><div class="so-what"><strong>So what for procurement</strong><p>Price step-down tied to list price.</p></div></article></div></div>
+ <div class="legend"><span>Read the impact</span><div class="tags"><span class="tag pricing">Pricing</span><span class="tag lock-in">Lock-in</span><span class="tag supply">Supply</span><span class="tag risk">Risk</span><span class="tag opportunity">Opportunity</span></div></div><div class="source-line">Sources <a href="#source-5" aria-label="Go to source 5">[5]</a> <a href="#source-6" aria-label="Go to source 6">[6]</a> <a href="#source-9" aria-label="Go to source 9">[9]</a> <a href="#source-13" aria-label="Go to source 13">[13]</a> <a href="#source-22" aria-label="Go to source 22">[22]</a> <a href="#source-23" aria-label="Go to source 23">[23]</a></div></section>
+ <section id="deals" class="briefing-section"><div class="section-head"><div class="section-heading"><span class="section-number">02</span><div><h2>Market pulse & deal flow</h2><p class="section-intro">Deal flow, concentration risk, and the terms to protect.</p></div></div><span class="section-count">Market pulse</span></div>
+ <div class="panel deal-chart"><div class="panel-head"><h3>A big month for bigger platforms</h3><span>Deal value · US$ billions</span></div><div class="chart-body" role="img" aria-label="Schneider Electric → PTC: $22.6B, Announced 5 Oct 2026 (equity value); Skyworks + Qorvo: ~$22.0B, Closed 5 Oct 2026; Amazon → Decart: ~$7.0B, Reported only; Proofpoint → Varonis: ~$6.3B, Agreed, Oct 2026; GTCR &amp; Elliott → CCC Intelligent Solutions: ~$6.1B, Take-private, Oct 2026; IonQ → Elisity: up to $1.3B, Announced 12 Oct 2026. All bars use a linear scale from 0 to 25 US$ billion."><div class="bar-row"><div class="bar-label">Schneider Electric → PTC<small>Announced 5 Oct 2026 (equity value)</small></div><div class="bar-track"><div class="bar-fill " style="width:90.4%"></div><span class="bar-value" style="left:90.4%">$22.6B</span></div></div><div class="bar-row"><div class="bar-label">Skyworks + Qorvo<small>Closed 5 Oct 2026</small></div><div class="bar-track"><div class="bar-fill " style="width:88%"></div><span class="bar-value" style="left:88%">~$22.0B</span></div></div><div class="bar-row"><div class="bar-label">Amazon → Decart<small>Reported only</small></div><div class="bar-track"><div class="bar-fill reported" style="width:28.000000000000004%"></div><span class="bar-value" style="left:28.000000000000004%">~$7.0B</span></div></div><div class="bar-row"><div class="bar-label">Proofpoint → Varonis<small>Agreed, Oct 2026</small></div><div class="bar-track"><div class="bar-fill " style="width:25.2%"></div><span class="bar-value" style="left:25.2%">~$6.3B</span></div></div><div class="bar-row"><div class="bar-label">GTCR &amp; Elliott → CCC Intelligent Solutions<small>Take-private, Oct 2026</small></div><div class="bar-track"><div class="bar-fill " style="width:24.4%"></div><span class="bar-value" style="left:24.4%">~$6.1B</span></div></div><div class="bar-row"><div class="bar-label">IonQ → Elisity<small>Announced 12 Oct 2026</small></div><div class="bar-track"><div class="bar-fill " style="width:5.2%"></div><span class="bar-value" style="left:5.2%">up to $1.3B</span></div></div><div class="bar-axis"><span>0</span><span>5</span><span>10</span><span>15</span><span>20</span><span>25</span></div></div><p class="chart-note">Also: Cloudflare acquired Deno (undisclosed), 10 Oct 2026.</p></div>
+ <div class="cards-grid"><article class="news-card"><div class="card-top"><span class="card-index">DEAL / 01</span></div><h3 class="card-title">Proofpoint → Varonis (~$6.3B)</h3><div class="tags"><span class="tag lock-in">Lock-in</span><span class="tag pricing">Pricing</span></div><p class="card-body">Thoma Bravo-backed Proofpoint is acquiring the data-security vendor in cash at $49.75/share, a 52% premium, combining email/people security with data-access monitoring.</p><div class="so-what"><strong>So what for procurement</strong><p>If you own both, expect a bundled &quot;platform&quot; pitch at renewal. If you own Varonis only, lock in multi-year pricing and support terms before integration starts.</p></div><div class="source-line">Sources <a href="#source-1" aria-label="Go to source 1">[1]</a> <a href="#source-2" aria-label="Go to source 2">[2]</a> <a href="#source-3" aria-label="Go to source 3">[3]</a> <a href="#source-4" aria-label="Go to source 4">[4]</a></div></article><article class="news-card"><div class="card-top"><span class="card-index">DEAL / 02</span></div><h3 class="card-title">Schneider Electric → PTC ($22.6B)</h3><div class="tags"><span class="tag lock-in">Lock-in</span></div><p class="card-body">An industrial-automation giant buying a major CAD, PLM and IoT software vendor.</p><div class="so-what"><strong>So what for procurement</strong><p>Review PTC licence terms (Creo, Windchill, ThingWorx) for change-of-control and price-protection clauses.</p></div><div class="source-line">Sources <a href="#source-1" aria-label="Go to source 1">[1]</a> <a href="#source-2" aria-label="Go to source 2">[2]</a> <a href="#source-3" aria-label="Go to source 3">[3]</a> <a href="#source-4" aria-label="Go to source 4">[4]</a></div></article><article class="news-card"><div class="card-top"><span class="card-index">DEAL / 03</span></div><h3 class="card-title">Skyworks + Qorvo closes (~$22B)</h3><div class="tags"><span class="tag supply">Supply</span></div><p class="card-body">Two of the largest RF chip makers combined, concentrating radio-component supply.</p><div class="so-what"><strong>So what for procurement</strong><p>Fewer sources for RF components. Hardware OEMs may pass through costs; ask suppliers about second-source plans.</p></div><div class="source-line">Sources <a href="#source-1" aria-label="Go to source 1">[1]</a> <a href="#source-2" aria-label="Go to source 2">[2]</a> <a href="#source-3" aria-label="Go to source 3">[3]</a> <a href="#source-4" aria-label="Go to source 4">[4]</a></div></article><article class="news-card"><div class="card-top"><span class="card-index">DEAL / 04</span></div><h3 class="card-title">IonQ → Elisity (up to $1.3B)</h3><div class="tags"><span class="tag risk">Risk</span><span class="tag opportunity">Opportunity</span></div><p class="card-body">A quantum-computing company acquiring a network micro-segmentation security vendor.</p><div class="so-what"><strong>So what for procurement</strong><p>Post-quantum security is entering roadmaps. Ask key vendors for their post-quantum cryptography timelines.</p></div><div class="source-line">Sources <a href="#source-1" aria-label="Go to source 1">[1]</a> <a href="#source-2" aria-label="Go to source 2">[2]</a> <a href="#source-3" aria-label="Go to source 3">[3]</a> <a href="#source-4" aria-label="Go to source 4">[4]</a></div></article><article class="news-card"><div class="card-top"><span class="card-index">DEAL / 05</span></div><h3 class="card-title">Cloudflare → Deno</h3><div class="tags"><span class="tag lock-in">Lock-in</span></div><p class="card-body">Cloudflare bought the team behind an open-source alternative to its own Workers platform.</p><div class="so-what"><strong>So what for procurement</strong><p>Open-source &quot;escape hatches&quot; can be absorbed by the vendor you were hedging against. Tie exit plans to open standards, not single projects.</p></div><div class="source-line">Sources <a href="#source-1" aria-label="Go to source 1">[1]</a> <a href="#source-2" aria-label="Go to source 2">[2]</a> <a href="#source-3" aria-label="Go to source 3">[3]</a> <a href="#source-4" aria-label="Go to source 4">[4]</a></div></article><article class="news-card"><div class="card-top"><span class="card-index">DEAL / 06</span><span class="reported-label">Includes reported items</span></div><h3 class="card-title">Private equity take-privates</h3><div class="tags"><span class="tag pricing">Pricing</span><span class="tag risk">Risk</span></div><p class="card-body">GTCR and Elliott taking CCC private (~$6.1B); Amazon reportedly weighing ~$7B for AI startup Decart; Intuit adding billing software via Sequence (~$200M, reported).</p><div class="so-what"><strong>So what for procurement</strong><p>PE ownership often brings renewal price rises. Flag PE-owned vendors and negotiate caps on annual uplifts.</p></div><div class="source-line">Sources <a href="#source-1" aria-label="Go to source 1">[1]</a> <a href="#source-2" aria-label="Go to source 2">[2]</a> <a href="#source-3" aria-label="Go to source 3">[3]</a> <a href="#source-4" aria-label="Go to source 4">[4]</a></div></article></div><div class="source-line">Sources <a href="#source-1" aria-label="Go to source 1">[1]</a> <a href="#source-2" aria-label="Go to source 2">[2]</a> <a href="#source-3" aria-label="Go to source 3">[3]</a> <a href="#source-4" aria-label="Go to source 4">[4]</a></div></section>
+ <section id="ai" class="briefing-section"><div class="section-head"><div class="section-heading"><span class="section-number">03</span><div><h2>AI & GenAI trends</h2><p class="section-intro">The trends changing cost, control, and contract terms.</p></div></div><span class="section-count">AI & GenAI</span></div><div class="cards-grid"><article class="news-card"><div class="card-top"><span class="card-index">TREND / 01</span></div><h3 class="card-title">Agents become coworkers with their own accounts</h3><div class="tags"><span class="tag pricing">Pricing</span><span class="tag risk">Risk</span></div><p class="card-body">Google announced the Gemini agent on 8 Oct (private preview, no full pricing): it gets its own Workspace account, email and calendar, logs its actions and has a hard spend cap per project. Microsoft&#39;s new Copilot (25 Sep) adds Autopilot, an agent that keeps working in the background.</p><div class="so-what"><strong>So what for procurement</strong><p>An agent is a new kind of licensee. Contracts need terms for agent identities, spend caps, audit logs and liability.</p></div><div class="source-line">Sources <a href="#source-5" aria-label="Go to source 5">[5]</a> <a href="#source-6" aria-label="Go to source 6">[6]</a> <a href="#source-7" aria-label="Go to source 7">[7]</a> <a href="#source-8" aria-label="Go to source 8">[8]</a></div></article><article class="news-card"><div class="card-top"><span class="card-index">TREND / 02</span></div><h3 class="card-title">Frontier models churn every few weeks</h3><div class="tags"><span class="tag lock-in">Lock-in</span><span class="tag opportunity">Opportunity</span></div><p class="card-body">OpenAI put GPT-6 into every ChatGPT plan on 7 Oct. Google made Gemini 4 Argon generally available (13 Oct) and Meta launched Muse Wonder (12 Oct). Benchmarks disagree: a model ranked near the top overall can rank in the 30s on a legal-agent test.</p><div class="so-what"><strong>So what for procurement</strong><p>Avoid single-model commitments. Buy through platforms that let you switch models and test on your own tasks.</p></div><div class="source-line">Sources <a href="#source-5" aria-label="Go to source 5">[5]</a> <a href="#source-6" aria-label="Go to source 6">[6]</a> <a href="#source-7" aria-label="Go to source 7">[7]</a> <a href="#source-8" aria-label="Go to source 8">[8]</a></div></article><article class="news-card"><div class="card-top"><span class="card-index">TREND / 03</span></div><h3 class="card-title">Small models make high-volume AI cheap</h3><div class="tags"><span class="tag opportunity">Opportunity</span><span class="tag pricing">Pricing</span></div><p class="card-body">Claude Haiku 5.5 (7 Oct) costs $0.10 / $0.50 per million input/output tokens. Gemini 4 Argon is $2 / $10, cached inputs 95% off, temporary launch discount.</p><div class="so-what"><strong>So what for procurement</strong><p>Route routine work to small models. Write price step-down clauses so you benefit when list prices fall.</p></div><div class="source-line">Sources <a href="#source-5" aria-label="Go to source 5">[5]</a> <a href="#source-6" aria-label="Go to source 6">[6]</a> <a href="#source-7" aria-label="Go to source 7">[7]</a> <a href="#source-8" aria-label="Go to source 8">[8]</a></div></article><article class="news-card"><div class="card-top"><span class="card-index">TREND / 04</span></div><h3 class="card-title">The model is the cheap part</h3><div class="tags"><span class="tag pricing">Pricing</span></div><p class="card-body">Integration, compliance and monitoring cost $5–$10 for every $1 spent on models. 45% of IT leaders have low or no confidence in calculating AI costs.</p><div class="so-what"><strong>So what for procurement</strong><p>Build business cases on total cost of ownership, not token price.</p></div><div class="source-line">Sources <a href="#source-5" aria-label="Go to source 5">[5]</a> <a href="#source-6" aria-label="Go to source 6">[6]</a> <a href="#source-7" aria-label="Go to source 7">[7]</a> <a href="#source-8" aria-label="Go to source 8">[8]</a></div></article><article class="news-card"><div class="card-top"><span class="card-index">TREND / 05</span></div><h3 class="card-title">Agent safety is now a contract issue</h3><div class="tags"><span class="tag risk">Risk</span></div><p class="card-body">Anthropic cut internal agent tests off from the live internet after agents misused real websites. OpenAI publishes a log of unwanted model behaviour. Microsoft&#39;s CEO called for an emergency stop a human can pull, logs the AI cannot edit, and no model grading its own work.</p><div class="so-what"><strong>So what for procurement</strong><p>Add human override, tamper-proof logs, permission scoping and incident-notification timelines to RFPs.</p></div><div class="source-line">Sources <a href="#source-5" aria-label="Go to source 5">[5]</a> <a href="#source-6" aria-label="Go to source 6">[6]</a> <a href="#source-7" aria-label="Go to source 7">[7]</a> <a href="#source-8" aria-label="Go to source 8">[8]</a></div></article><article class="news-card"><div class="card-top"><span class="card-index">TREND / 06</span></div><h3 class="card-title">Adoption up, spend cooling, chip stocks wobbling</h3><div class="tags"><span class="tag supply">Supply</span><span class="tag risk">Risk</span></div><p class="card-body">Ramp&#39;s October index puts paid AI adoption at 55.9% of US businesses, but token spend has barely grown in two months. AI chip stocks shed over $1 trillion in the week of 12 Oct; CoreWeave&#39;s debt is under scrutiny.</p><div class="so-what"><strong>So what for procurement</strong><p>Check the financial health of AI and GPU-cloud suppliers; ask for data portability, escrow and step-in rights.</p></div><div class="source-line">Sources <a href="#source-5" aria-label="Go to source 5">[5]</a> <a href="#source-6" aria-label="Go to source 6">[6]</a> <a href="#source-7" aria-label="Go to source 7">[7]</a> <a href="#source-8" aria-label="Go to source 8">[8]</a></div></article></div>
+ <div class="panel prices-panel"><div class="panel-head"><h3>Model price check</h3><span>US$ per million tokens</span></div><div class="table-wrap" tabindex="0" role="region" aria-label="Model prices, scroll horizontally"><table><caption class="sr-only">Model prices in US dollars per million tokens</caption><thead><tr><th scope="col">Model</th><th scope="col" class="number">Input</th><th scope="col" class="number">Output</th><th scope="col">Note</th></tr></thead><tbody><tr><th scope="row">Claude Haiku 5.5</th><td class="number">$0.10</td><td class="number">$0.50</td><td>Requests up to 100k tokens</td></tr><tr><th scope="row">Gemini 4 Argon</th><td class="number">$2.00</td><td class="number">$10.00</td><td>Cached input 95% off; launch discount temporary</td></tr></tbody></table></div></div><div class="source-line">Sources <a href="#source-5" aria-label="Go to source 5">[5]</a> <a href="#source-6" aria-label="Go to source 6">[6]</a> <a href="#source-7" aria-label="Go to source 7">[7]</a> <a href="#source-8" aria-label="Go to source 8">[8]</a> <a href="#source-9" aria-label="Go to source 9">[9]</a> <a href="#source-10" aria-label="Go to source 10">[10]</a> <a href="#source-11" aria-label="Go to source 11">[11]</a> <a href="#source-12" aria-label="Go to source 12">[12]</a></div></section>
+ <section id="vendors" class="briefing-section"><div class="section-head"><div class="section-heading"><span class="section-number">04</span><div><h2>Vendor watch</h2><p class="section-intro">Eight vendor positions to revisit before your next negotiation.</p></div></div><span class="section-count">Vendor watch</span></div><p class="editorial-note">Risk ratings are an editorial judgement. Secondary commentary is labelled “reported”.</p>
+ <div class="table-wrap panel" tabindex="0" role="region" aria-label="Vendor watch, scroll horizontally"><table class="vendor-table"><caption class="sr-only">Vendor risks, changes, exposure and negotiation levers</caption><thead><tr><th scope="col">Vendor</th><th scope="col">Risk</th><th scope="col">What changed</th><th scope="col">Exposure</th><th scope="col">Negotiation lever</th></tr></thead><tbody><tr><th scope="row">Microsoft</th><td><span class="severity high">High</span></td><td>New Copilot (25 Sep): Office chat stays per-user; agent work billed in Copilot Credits. New agents join your spending policy by default.</td><td>Uncapped consumption on top of E3/E5</td><td>Set admin spend limits first; pre-paid credit pools at a discount; small pilot group</td></tr><tr><th scope="row">Broadcom / VMware</th><td><span class="severity high">High</span></td><td>Licence-included Azure VMware Solution phased out; existing customers have until Aug 2027 to bring their own VCF licence. Gartner cites typical increases of 300–400%.<small class="reported-note">Gartner VMware uplift figure: reported.</small></td><td>Renewal shock; forced re-platforming</td><td>Price a migration (Nutanix, Proxmox, OpenShift, Hyper-V, public cloud) to create leverage</td></tr><tr><th scope="row">Dell / HP / Lenovo / HPE</th><td><span class="severity high">High</span></td><td>Memory-driven price rises continue into Q4; enterprise SSD increases accelerating</td><td>Refresh budgets overrun</td><td>Pull orders forward; fix prices on framework deals; extend refresh cycles</td></tr><tr><th scope="row">Google</th><td><span class="severity medium">Medium</span></td><td>Gemini agent in preview; Gems become &quot;skills&quot; (retired on Workspace Business/Enterprise no sooner than 1 Mar 2027); Argon GA with temporary discount</td><td>Expiring launch prices; migration effort</td><td>Lock launch pricing 12–24 months; agent identity and spend-cap terms in writing</td></tr><tr><th scope="row">OpenAI</th><td><span class="severity medium">Medium</span></td><td>GPT-6 on every ChatGPT plan (Sol paid, Luna Free/Go). Eight US states filed consumer-protection suits on 14 Oct</td><td>Legal exposure; shadow use of free tiers</td><td>Move staff to an enterprise plan; require indemnities and no training on your data</td></tr><tr><th scope="row">SAP / Workday / ServiceNow</th><td><span class="severity medium">Medium</span></td><td>Reported: moves to AI tiers and token pools; SAP reported to restrict third-party agents on its APIs</td><td>Your agents blocked from your own data</td><td>Contract explicit API and data-access rights for third-party agents</td></tr><tr><th scope="row">Salesforce</th><td><span class="severity watch">Watch</span></td><td>Agentforce sold per action, via Flex Credits, or per user</td><td>Three models, hard to compare</td><td>Model all three on real volumes; cap overage rates</td></tr><tr><th scope="row">Anthropic</th><td><span class="severity opportunity">Opportunity</span></td><td>Haiku 5.5 at $0.10/$0.50; usage policy update effective 12 Nov; $100M Frontier Academy for implementation engineers</td><td>Policy changes on permitted use</td><td>Use falling unit prices to renegotiate commitments; ask for implementation support</td></tr></tbody></table></div><div class="source-line">Sources <a href="#source-5" aria-label="Go to source 5">[5]</a> <a href="#source-6" aria-label="Go to source 6">[6]</a> <a href="#source-7" aria-label="Go to source 7">[7]</a> <a href="#source-8" aria-label="Go to source 8">[8]</a> <a href="#source-9" aria-label="Go to source 9">[9]</a> <a href="#source-10" aria-label="Go to source 10">[10]</a> <a href="#source-12" aria-label="Go to source 12">[12]</a> <a href="#source-13" aria-label="Go to source 13">[13]</a> <a href="#source-14" aria-label="Go to source 14">[14]</a> <a href="#source-15" aria-label="Go to source 15">[15]</a> <a href="#source-16" aria-label="Go to source 16">[16]</a></div></section>
+ <section id="playbook" class="briefing-section"><div class="section-head"><div class="section-heading"><span class="section-number">05</span><div><h2>Strategy playbook</h2><p class="section-intro">Eight sourcing plays. Start with the three that need action now.</p></div></div><span class="section-count">Strategy playbook</span></div><div class="plays-grid"><article class="play-card" id="P1"><div class="play-top"><span class="play-id">P1</span><span class="urgency now">Now</span></div><h3>Guardrails on consumption pricing</h3><p class="play-why">Credits and tokens turn fixed costs variable</p><ul><li>Hard spend caps; alerts at 50/80/100%; agents stop rather than bill overage</li><li>Pre-paid pools with rollover; fixed overage rates</li><li>Monthly line-item usage reporting</li></ul></article><article class="play-card" id="P2"><div class="play-top"><span class="play-id">P2</span><span class="urgency now">Now</span></div><h3>Pull hardware buys forward</h3><p class="play-why">Memory prices rising; supply tight into 2027</p><ul><li>Lock Q4/Q1 pricing on framework agreements</li><li>Extend healthy-device refresh by 6–12 months</li><li>Memory pass-through formulas in writing</li></ul></article><article class="play-card" id="P3"><div class="play-top"><span class="play-id">P3</span><span class="urgency now">Now</span></div><h3>Run a VMware exit cost model</h3><p class="play-why">A credible alternative is the only lever that works</p><ul><li>Price two alternatives incl. migration effort</li><li>Plan 8–12 weeks mid-size, 6+ months enterprise</li><li>Start before the renewal window</li></ul></article><article class="play-card" id="P4"><div class="play-top"><span class="play-id">P4</span><span class="urgency ">This quarter</span></div><h3>Stay model-agnostic</h3><p class="play-why">The best model changes every few weeks</p><ul><li>Prefer multi-model platforms</li><li>12-month terms for AI-specific commitments</li><li>Price step-down tied to list price</li></ul></article><article class="play-card" id="P5"><div class="play-top"><span class="play-id">P5</span><span class="urgency ">This quarter</span></div><h3>M&amp;A protection in contracts</h3><p class="play-why">Tech M&amp;A up 38% this year</p><ul><li>Change-of-control: terminate or freeze price</li><li>Cap annual uplifts (CPI or 3–5%)</li><li>Track PE-owned and target vendors</li></ul></article><article class="play-card" id="P6"><div class="play-top"><span class="play-id">P6</span><span class="urgency ">This quarter</span></div><h3>Agent terms in AI contracts</h3><p class="play-why">Agents act alone and can overreach</p><ul><li>Human override; tamper-proof logs</li><li>Least-privilege permissions; incident-notification SLAs</li><li>No training on inputs; clear data residency</li></ul></article><article class="play-card" id="P7"><div class="play-top"><span class="play-id">P7</span><span class="urgency ">At renewal</span></div><h3>Secure data and API rights</h3><p class="play-why">Some SaaS vendors restrict third-party agents</p><ul><li>Contracted API access for any agent</li><li>Bulk export formats and exit assistance</li></ul></article><article class="play-card" id="P8"><div class="play-top"><span class="play-id">P8</span><span class="urgency ">By Q1 2027</span></div><h3>Prepare for Malaysia&#39;s AI law</h3><p class="play-why">Covers AI used by Malaysian deployers, wherever hosted</p><ul><li>Inventory AI systems incl. features inside SaaS</li><li>Ask vendors for risk assessments and incident-reporting support</li><li>Compliance-cooperation clauses in new contracts</li></ul></article></div><div class="source-line">Sources <a href="#source-9" aria-label="Go to source 9">[9]</a> <a href="#source-10" aria-label="Go to source 10">[10]</a> <a href="#source-12" aria-label="Go to source 12">[12]</a> <a href="#source-13" aria-label="Go to source 13">[13]</a> <a href="#source-14" aria-label="Go to source 14">[14]</a> <a href="#source-15" aria-label="Go to source 15">[15]</a> <a href="#source-16" aria-label="Go to source 16">[16]</a> <a href="#source-22" aria-label="Go to source 22">[22]</a> <a href="#source-23" aria-label="Go to source 23">[23]</a></div></section>
+ <section id="calendar" class="briefing-section"><div class="section-head"><div class="section-heading"><span class="section-number">06</span><div><h2>Action calendar</h2><p class="section-intro">Dates to plan around. Countdowns use your current local date.</p></div></div><span class="section-count">Action calendar</span></div><div class="calendar-list"><article class="calendar-row"><div class="calendar-date">Q4 2026</div><p class="calendar-text">Memory contract prices rise again (DRAM +10–15%, NAND +15–20%). Lock hardware pricing.</p><span class="countdown" >in effect</span></article><article class="calendar-row"><div class="calendar-date">12 Nov 2026</div><p class="calendar-text">Anthropic usage policy update takes effect. Check internal use cases fit.</p><span class="countdown" data-countdown="2026-11-12">Calculating…</span></article><article class="calendar-row"><div class="calendar-date">Nov–Dec 2026</div><p class="calendar-text">Malaysia AI Governance Bill expected in Parliament. Start the AI inventory.</p><span class="countdown" data-countdown="2026-11-01">Calculating…</span></article><article class="calendar-row"><div class="calendar-date">1 Dec 2026</div><p class="calendar-text">Review Microsoft 365 Copilot agent and spending settings (partner guidance).</p><span class="countdown" data-countdown="2026-12-01">Calculating…</span></article><article class="calendar-row"><div class="calendar-date">1 Mar 2027</div><p class="calendar-text">Gemini Gems retired on Workspace Business/Enterprise (no sooner than). List Gems, assign owners.</p><span class="countdown" data-countdown="2027-03-01">Calculating…</span></article><article class="calendar-row"><div class="calendar-date">Aug 2027</div><p class="calendar-text">Azure VMware Solution customers must move to bring-your-own VCF licensing.</p><span class="countdown" data-countdown="2027-08-01">Calculating…</span></article></div><div class="source-line">Sources <a href="#source-5" aria-label="Go to source 5">[5]</a> <a href="#source-6" aria-label="Go to source 6">[6]</a> <a href="#source-8" aria-label="Go to source 8">[8]</a> <a href="#source-13" aria-label="Go to source 13">[13]</a> <a href="#source-14" aria-label="Go to source 14">[14]</a> <a href="#source-22" aria-label="Go to source 22">[22]</a> <a href="#source-23" aria-label="Go to source 23">[23]</a></div></section>
+ <section id="malaysia" class="briefing-section"><div class="section-head"><div class="section-heading"><span class="section-number">07</span><div><h2>Malaysia & ASEAN</h2><p class="section-intro">Capacity is coming. Governance is catching up.</p></div></div><span class="section-count">Malaysia & ASEAN lens</span></div><div class="region-grid"><article class="panel capacity-panel"><div class="panel-head"><h3>Johor’s capacity pipeline</h3><span>H1 2026 · MW</span></div><div class="capacity-total"><strong>4,198<span> MW</span></strong><p>Operational + pipeline</p></div><div class="stacked-bar" role="img" aria-label="Johor data-centre capacity: operational 1,110 MW, under construction 602 MW, planning 2,486 MW. Total 4,198 MW."><span class="stack-segment operational" style="width:26.44116245831348%"></span><span class="stack-segment construction" style="width:14.340161981896141%"></span><span class="stack-segment planning" style="width:59.21867555979038%"></span></div><dl class="stack-legend"><div><dt><i class="operational"></i>Operational</dt><dd>1,110 MW</dd></div><div><dt><i class="construction"></i>Under construction</dt><dd>602 MW</dd></div><div><dt><i class="planning"></i>Planning</dt><dd>2,486 MW</dd></div></dl><p class="chart-note">Cushman & Wakefield</p><div class="malaysia-capacity"><h3>Malaysia operational capacity</h3><div role="img" aria-label="Malaysia operational capacity: end-2025 900 MW; end-2026 forecast 2,055 MW. Both bars use a linear scale from 0 to 2,500 MW."><div class="capacity-row"><div><span>End-2025</span><strong>900 MW</strong></div><div class="bar-track"><div class="bar-fill" style="width:36%"></div></div></div><div class="capacity-row"><div><span>End-2026 forecast</span><strong>2,055 MW</strong></div><div class="bar-track"><div class="bar-fill" style="width:82.19999999999999%"></div></div></div><div class="capacity-axis"><span>0</span><span>1,250</span><span>2,500 MW</span></div></div><p class="chart-note">JLL</p></div><ul class="region-points"><li>MITI expects Johor to host 60% of Malaysia&#39;s data-centre capacity by 2030.</li><li>Johor set up a Special Technical Committee to vet new data centres on water, electricity and site suitability, and says it will favour green, renewable-powered projects.</li></ul><div class="so-what"><strong>So what for procurement</strong><p>Colocation supply is growing fast. Play providers against each other, but contract power-delivery dates, renewable-sourcing evidence and expansion headroom.</p></div><div class="source-line">Sources <a href="#source-17" aria-label="Go to source 17">[17]</a> <a href="#source-18" aria-label="Go to source 18">[18]</a> <a href="#source-19" aria-label="Go to source 19">[19]</a> <a href="#source-20" aria-label="Go to source 20">[20]</a> <a href="#source-21" aria-label="Go to source 21">[21]</a></div></article>
+ <article class="panel bill-panel"><div class="panel-head"><h3>AI Governance Bill</h3><span class="severity medium">Next: Parliament</span></div><ol class="bill-steps"><li class="bill-step done"><span class="step-mark" aria-hidden="true">✓</span><div><strong>Consultation opened<span class="sr-only"> — completed</span></strong><span>10 Jul 2026</span></div></li><li class="bill-step done"><span class="step-mark" aria-hidden="true">✓</span><div><strong>Consultation closed<span class="sr-only"> — completed</span></strong><span>31 Jul 2026</span></div></li><li class="bill-step done"><span class="step-mark" aria-hidden="true">✓</span><div><strong>Cabinet submission<span class="sr-only"> — completed</span></strong><span>~end Jul 2026</span></div></li><li class="bill-step next"><span class="step-mark" aria-hidden="true">→</span><div><strong>Parliament (next)</strong><span>Nov–Dec 2026</span></div></li></ol><p class="bill-summary">Proposed by the National AI Office. Creates a Central AI Authority (AI safety; investigation &amp; enforcement; AI enablement/sandboxes), five governance principles (human dignity and agency, proportionate transparency, accountability and redress, safety and resilience, responsible data governance), risk-based obligations and AI incident reporting. Applies to AI used by a deployer established in Malaysia regardless of where it is hosted; exemptions only for personal use and national security.</p><div class="so-what"><strong>So what for procurement</strong><p>Your organisation is a &quot;deployer&quot;. Vendor contracts should commit suppliers to support assessments and incident reporting.</p></div><div class="source-line">Sources <a href="#source-22" aria-label="Go to source 22">[22]</a> <a href="#source-23" aria-label="Go to source 23">[23]</a></div></article></div></section>
+ <section id="learn" class="briefing-section"><div class="section-head"><div class="section-heading"><span class="section-number">08</span><div><h2>Learning centre</h2><p class="section-intro">Ten terms to know. Five questions to test your judgement.</p></div></div><span class="section-count">Learn</span></div><div class="learn-grid"><div class="glossary-list"><div class="panel-head"><h3>The procurement glossary</h3><span>10 terms</span></div><details><summary><span class="glossary-index">01</span>Token<span class="glossary-plus" aria-hidden="true">+</span></summary><p>A chunk of text (~¾ of a word). AI APIs price per million tokens; output costs more than input.</p></details><details><summary><span class="glossary-index">02</span>Agent / agentic AI<span class="glossary-plus" aria-hidden="true">+</span></summary><p>AI that carries out multi-step tasks on its own (sending emails, updating records) rather than just answering.</p></details><details><summary><span class="glossary-index">03</span>Inference vs training<span class="glossary-plus" aria-hidden="true">+</span></summary><p>Training builds a model; inference runs it. Enterprises mostly pay for inference.</p></details><details><summary><span class="glossary-index">04</span>RAG<span class="glossary-plus" aria-hidden="true">+</span></summary><p>Retrieval-augmented generation: the AI looks up your documents first, then answers from them.</p></details><details><summary><span class="glossary-index">05</span>Small language model<span class="glossary-plus" aria-hidden="true">+</span></summary><p>A smaller, cheaper, faster model for routine high-volume work; some run on a laptop.</p></details><details><summary><span class="glossary-index">06</span>Context caching<span class="glossary-plus" aria-hidden="true">+</span></summary><p>Reusing input the model has already processed, billed at a large discount.</p></details><details><summary><span class="glossary-index">07</span>Credits<span class="glossary-plus" aria-hidden="true">+</span></summary><p>A vendor&#39;s own metering currency (Copilot Credits, Flex Credits). Convert to cost per task to compare.</p></details><details><summary><span class="glossary-index">08</span>MCP<span class="glossary-plus" aria-hidden="true">+</span></summary><p>Model Context Protocol: an open standard for connecting AI tools to systems and data. A lock-in hedge.</p></details><details><summary><span class="glossary-index">09</span>HBM<span class="glossary-plus" aria-hidden="true">+</span></summary><p>High-bandwidth memory used in AI chips; its demand is why ordinary server/PC memory is scarce.</p></details><details><summary><span class="glossary-index">10</span>Outcome-based pricing<span class="glossary-plus" aria-hidden="true">+</span></summary><p>Paying per result (resolved ticket, processed invoice). Needs a tight contractual definition of &quot;outcome&quot;.</p></details></div><div id="quiz" class="quiz-panel" aria-label="Five-question knowledge check"><noscript>Enable JavaScript to take the five-question quiz.</noscript></div></div></section>
+ <section id="sources" class="briefing-section"><div class="section-head"><div class="section-heading"><span class="section-number">09</span><div><h2>Sources</h2><p class="section-intro">The 23 sources supplied with this briefing.</p></div></div><span class="section-count">Source register</span></div><ol class="sources-grid"><li id="source-1"><a href="https://nonbindingthoughts.substack.com/p/please-advise-deal-sheet-oct-16-2026" target="_blank" rel="noopener noreferrer"><span class="source-number">01</span><span>Please Advise: Deal Sheet, 16 Oct 2026</span><span aria-hidden="true">↗</span></a></li><li id="source-2"><a href="https://dealroom.net/blog/recent-m-a-deals" target="_blank" rel="noopener noreferrer"><span class="source-number">02</span><span>Dealroom: Recent M&amp;A Deals 2026</span><span aria-hidden="true">↗</span></a></li><li id="source-3"><a href="https://intellizence.com/insights/merger-and-acquisition/largest-merger-acquisition-deals/" target="_blank" rel="noopener noreferrer"><span class="source-number">03</span><span>Intellizence: M&amp;A Tracker 2026</span><span aria-hidden="true">↗</span></a></li><li id="source-4"><a href="https://techcrunch.com/tag/mergers-and-acquisitions/" target="_blank" rel="noopener noreferrer"><span class="source-number">04</span><span>TechCrunch: Mergers and Acquisitions</span><span aria-hidden="true">↗</span></a></li><li id="source-5"><a href="https://aisdg.substack.com/p/ai-news-for-october-16-2026" target="_blank" rel="noopener noreferrer"><span class="source-number">05</span><span>AI News for 16 Oct 2026</span><span aria-hidden="true">↗</span></a></li><li id="source-6"><a href="https://aiweekly.co/ai-news-today/edition/2026-10-15" target="_blank" rel="noopener noreferrer"><span class="source-number">06</span><span>AI Weekly, 15 Oct 2026</span><span aria-hidden="true">↗</span></a></li><li id="source-7"><a href="https://ai2roi.substack.com/p/ai-to-roi-news-and-analysis-october-c69" target="_blank" rel="noopener noreferrer"><span class="source-number">07</span><span>AI to ROI, 16 Oct 2026</span><span aria-hidden="true">↗</span></a></li><li id="source-8"><a href="https://hellogrowth.ai/en/blog/ai-news-october-2026" target="_blank" rel="noopener noreferrer"><span class="source-number">08</span><span>Hello Growth: AI news October 2026</span><span aria-hidden="true">↗</span></a></li><li id="source-9"><a href="https://www.deloitte.com/us/en/insights/industry/technology/technology-media-and-telecom-predictions/2026/saas-ai-agents.html" target="_blank" rel="noopener noreferrer"><span class="source-number">09</span><span>Deloitte: SaaS and AI agents (TMT Predictions 2026)</span><span aria-hidden="true">↗</span></a></li><li id="source-10"><a href="https://letsdatascience.com/news/generative-ai-upends-enterprise-software-licensing-models-f620b093" target="_blank" rel="noopener noreferrer"><span class="source-number">10</span><span>Generative AI upends enterprise software licensing</span><span aria-hidden="true">↗</span></a></li><li id="source-11"><a href="https://hatchworks.com/blog/ai-agents/ai-agents-become-the-buyer/" target="_blank" rel="noopener noreferrer"><span class="source-number">11</span><span>HatchWorks: When AI agents become the buyer</span><span aria-hidden="true">↗</span></a></li><li id="source-12"><a href="https://no.linkedin.com/in/thomasjhicks" target="_blank" rel="noopener noreferrer"><span class="source-number">12</span><span>Thomas Hicks on Gartner AI contracting (LinkedIn)</span><span aria-hidden="true">↗</span></a></li><li id="source-13"><a href="https://www.communicationstoday.co.in/?p=424298" target="_blank" rel="noopener noreferrer"><span class="source-number">13</span><span>TrendForce Q4 2026 DRAM outlook (Communications Today)</span><span aria-hidden="true">↗</span></a></li><li id="source-14"><a href="https://www.techzine.eu/news/infrastructure/143729/microsoft-is-discontinuing-vmware-licenses-within-azure/" target="_blank" rel="noopener noreferrer"><span class="source-number">14</span><span>Techzine: Microsoft discontinuing VMware licences within Azure</span><span aria-hidden="true">↗</span></a></li><li id="source-15"><a href="https://dev.to/mr_manushukla/leaving-vmware-in-2026-the-7-step-cost-model-to-run-before-your-broadcom-renewal-2go6" target="_blank" rel="noopener noreferrer"><span class="source-number">15</span><span>Leaving VMware in 2026: cost model</span><span aria-hidden="true">↗</span></a></li><li id="source-16"><a href="https://www.cloudmagazin.com/en/2026/03/18/vmware-broadcom-kostenfalle-2026-alternativen-proxmox-nutanix/" target="_blank" rel="noopener noreferrer"><span class="source-number">16</span><span>Cloudmagazin: VMware migration timelines</span><span aria-hidden="true">↗</span></a></li><li id="source-17"><a href="https://edgeprop.my/content/1917257/johor-leads-apac-data-centre-boom-malaysia-tops-construction-—-cw" target="_blank" rel="noopener noreferrer"><span class="source-number">17</span><span>EdgeProp: Johor leads APAC data centre boom (C&amp;W)</span><span aria-hidden="true">↗</span></a></li><li id="source-18"><a href="https://www.nst.com.my/amp/business/corporate/2026/04/1428282/johor-tops-malaysias-leading-data-centre-hub" target="_blank" rel="noopener noreferrer"><span class="source-number">18</span><span>NST: Johor tops Malaysia&#39;s data centre hubs (JLL)</span><span aria-hidden="true">↗</span></a></li><li id="source-19"><a href="https://theedgemalaysia.com/node/812609" target="_blank" rel="noopener noreferrer"><span class="source-number">19</span><span>The Edge: Knight Frank Data Centre Atlas 2026</span><span aria-hidden="true">↗</span></a></li><li id="source-20"><a href="https://thesun.my/news/malaysia-news/johor-to-host-60-of-malaysia-s-total-data-centre-capacity-by-2030-tengku-zafrul-le14238366/" target="_blank" rel="noopener noreferrer"><span class="source-number">20</span><span>The Sun: Johor to host 60% of capacity by 2030</span><span aria-hidden="true">↗</span></a></li><li id="source-21"><a href="https://thesun.my/local-news/johor-attracted-50-data-centres-in-the-past-two-years-onn-hafiz-AD12665207" target="_blank" rel="noopener noreferrer"><span class="source-number">21</span><span>The Sun: Johor attracted 50 data centres</span><span aria-hidden="true">↗</span></a></li><li id="source-22"><a href="https://accesspartnership.com/opinion/malaysias-proposed-ai-governance-bill-weigh-in-before-the-window-closes/" target="_blank" rel="noopener noreferrer"><span class="source-number">22</span><span>Access Partnership: Malaysia&#39;s AI Governance Bill</span><span aria-hidden="true">↗</span></a></li><li id="source-23"><a href="https://w.media/malaysia-to-enact-ai-law/" target="_blank" rel="noopener noreferrer"><span class="source-number">23</span><span>W.Media: Malaysia to enact AI law</span><span aria-hidden="true">↗</span></a></li></ol></section>
+</main>
+<footer id="notes"><div class="footer-inner shell"><div><a class="footer-brand" href="#cover">Procurement Tech Radar<span>.</span></a><p>Prepared 17 Oct 2026 for internal procurement planning. Not legal or financial advice. Figures change quickly; refresh monthly.</p></div><a class="back-top" href="#cover">Back to top <span aria-hidden="true">↑</span></a></div></footer>
+<noscript><div class="noscript-note">This briefing is readable without JavaScript. Enable JavaScript for theme controls, live countdowns, and the quiz.</div></noscript></div>
+<script>
+/* MONTHLY CONTENT: edit this single RADAR_DATA object. The briefing is rendered from it on load. */
+const RADAR_DATA = {
+  "asOf": "2026-10-17",
+  "title": "Procurement Tech Radar",
+  "description": "Tech and AI developments, what they mean for how we buy, and the sourcing plays to run next.",
+  "header": {
+    "title": "Procurement Tech Radar",
+    "description": "Tech and AI developments, what they mean for how we buy, and the sourcing plays to run next.",
+    "chips": ["As of 17 Oct 2026", "Global + Malaysia", "23 sources"]
+  },
+  "kpis": [
+    { "label": "Tech M&A, YTD to 15 Oct", "value": "$901.6B", "delta": "+38% YoY", "deltaType": "warn", "sub": "consolidation" },
+    { "label": "DRAM contract price, Q4", "value": "+10–15%", "delta": "QoQ", "deltaType": "bad", "sub": "TrendForce" },
+    { "label": "NAND contract price, Q4", "value": "+15–20%", "delta": "QoQ", "deltaType": "bad", "sub": "tight into 2027" },
+    { "label": "Claude Haiku 5.5 input", "value": "$0.10 / M tokens", "delta": "~−75%", "deltaType": "good", "sub": "vs Haiku 4.5" },
+    { "label": "US firms paying for AI", "value": "55.9%", "delta": "flat spend", "deltaType": "neutral", "sub": "Ramp, Oct" },
+    { "label": "Johor DC capacity, operational", "value": "1,110 MW", "delta": "4,198 MW", "deltaType": "neutral", "sub": "incl. pipeline" }
+  ],
+  "signals": [
+    {
+      "title": "Software pricing moves from seats to credits",
+      "severity": "high",
+      "detail": "Microsoft now bills Copilot agent work by usage. Gartner expects at least 40% of enterprise SaaS spend to move to usage, agent or outcome pricing by 2030.",
+      "soWhat": "Hard spend caps; alerts at 50/80/100%; agents stop rather than bill overage."
+    },
+    {
+      "title": "Hardware costs keep climbing",
+      "severity": "high",
+      "detail": "Memory prices rise again in Q4 with supply tight into 2027. Servers and laptops carry the cost.",
+      "soWhat": "Lock Q4/Q1 pricing on framework agreements."
+    },
+    {
+      "title": "Consolidation is accelerating",
+      "severity": "medium",
+      "detail": "Tech M&A reached $901.6B through 15 Oct, up 38%. Security, data and AI vendors are being absorbed, changing roadmaps, support and renewal terms.",
+      "soWhat": "Change-of-control: terminate or freeze price."
+    },
+    {
+      "title": "Malaysia's AI law is close",
+      "severity": "medium",
+      "detail": "The AI Governance Bill heads to Parliament in Nov–Dec 2026 and covers AI used by deployers in Malaysia wherever it is hosted.",
+      "soWhat": "Inventory AI systems incl. features inside SaaS."
+    },
+    {
+      "title": "AI unit prices are falling fast",
+      "severity": "opportunity",
+      "detail": "Claude Haiku 5.5 runs about 75% cheaper than its predecessor. Use falling prices to renegotiate committed spend.",
+      "soWhat": "Price step-down tied to list price."
+    }
+  ],
+  "dealChart": [
+    { "name": "Schneider Electric → PTC", "valueB": 22.6, "valueLabel": "$22.6B", "status": "Announced 5 Oct 2026 (equity value)", "reported": false },
+    { "name": "Skyworks + Qorvo", "valueB": 22, "valueLabel": "~$22.0B", "status": "Closed 5 Oct 2026", "reported": false },
+    { "name": "Amazon → Decart", "valueB": 7, "valueLabel": "~$7.0B", "status": "Reported only", "reported": true },
+    { "name": "Proofpoint → Varonis", "valueB": 6.3, "valueLabel": "~$6.3B", "status": "Agreed, Oct 2026", "reported": false },
+    { "name": "GTCR & Elliott → CCC Intelligent Solutions", "valueB": 6.1, "valueLabel": "~$6.1B", "status": "Take-private, Oct 2026", "reported": false },
+    { "name": "IonQ → Elisity", "valueB": 1.3, "valueLabel": "up to $1.3B", "status": "Announced 12 Oct 2026", "reported": false }
+  ],
+  "dealChartNote": "Also: Cloudflare acquired Deno (undisclosed), 10 Oct 2026.",
+  "deals": [
+    {
+      "name": "Proofpoint → Varonis (~$6.3B)",
+      "tags": ["Lock-in", "Pricing"],
+      "body": "Thoma Bravo-backed Proofpoint is acquiring the data-security vendor in cash at $49.75/share, a 52% premium, combining email/people security with data-access monitoring.",
+      "soWhat": "If you own both, expect a bundled \"platform\" pitch at renewal. If you own Varonis only, lock in multi-year pricing and support terms before integration starts.",
+      "sources": [1, 2, 3, 4],
+      "reported": false
+    },
+    {
+      "name": "Schneider Electric → PTC ($22.6B)",
+      "tags": ["Lock-in"],
+      "body": "An industrial-automation giant buying a major CAD, PLM and IoT software vendor.",
+      "soWhat": "Review PTC licence terms (Creo, Windchill, ThingWorx) for change-of-control and price-protection clauses.",
+      "sources": [1, 2, 3, 4],
+      "reported": false
+    },
+    {
+      "name": "Skyworks + Qorvo closes (~$22B)",
+      "tags": ["Supply"],
+      "body": "Two of the largest RF chip makers combined, concentrating radio-component supply.",
+      "soWhat": "Fewer sources for RF components. Hardware OEMs may pass through costs; ask suppliers about second-source plans.",
+      "sources": [1, 2, 3, 4],
+      "reported": false
+    },
+    {
+      "name": "IonQ → Elisity (up to $1.3B)",
+      "tags": ["Risk", "Opportunity"],
+      "body": "A quantum-computing company acquiring a network micro-segmentation security vendor.",
+      "soWhat": "Post-quantum security is entering roadmaps. Ask key vendors for their post-quantum cryptography timelines.",
+      "sources": [1, 2, 3, 4],
+      "reported": false
+    },
+    {
+      "name": "Cloudflare → Deno",
+      "tags": ["Lock-in"],
+      "body": "Cloudflare bought the team behind an open-source alternative to its own Workers platform.",
+      "soWhat": "Open-source \"escape hatches\" can be absorbed by the vendor you were hedging against. Tie exit plans to open standards, not single projects.",
+      "sources": [1, 2, 3, 4],
+      "reported": false
+    },
+    {
+      "name": "Private equity take-privates",
+      "tags": ["Pricing", "Risk"],
+      "body": "GTCR and Elliott taking CCC private (~$6.1B); Amazon reportedly weighing ~$7B for AI startup Decart; Intuit adding billing software via Sequence (~$200M, reported).",
+      "soWhat": "PE ownership often brings renewal price rises. Flag PE-owned vendors and negotiate caps on annual uplifts.",
+      "sources": [1, 2, 3, 4],
+      "reported": true,
+      "reportedNote": "Amazon–Decart and Intuit–Sequence are reported items."
+    }
+  ],
+  "trends": [
+    {
+      "name": "Agents become coworkers with their own accounts",
+      "title": "Agents become coworkers with their own accounts",
+      "tags": ["Pricing", "Risk"],
+      "body": "Google announced the Gemini agent on 8 Oct (private preview, no full pricing): it gets its own Workspace account, email and calendar, logs its actions and has a hard spend cap per project. Microsoft's new Copilot (25 Sep) adds Autopilot, an agent that keeps working in the background.",
+      "soWhat": "An agent is a new kind of licensee. Contracts need terms for agent identities, spend caps, audit logs and liability.",
+      "sources": [5, 6, 7, 8],
+      "reported": false
+    },
+    {
+      "name": "Frontier models churn every few weeks",
+      "title": "Frontier models churn every few weeks",
+      "tags": ["Lock-in", "Opportunity"],
+      "body": "OpenAI put GPT-6 into every ChatGPT plan on 7 Oct. Google made Gemini 4 Argon generally available (13 Oct) and Meta launched Muse Wonder (12 Oct). Benchmarks disagree: a model ranked near the top overall can rank in the 30s on a legal-agent test.",
+      "soWhat": "Avoid single-model commitments. Buy through platforms that let you switch models and test on your own tasks.",
+      "sources": [5, 6, 7, 8],
+      "reported": false
+    },
+    {
+      "name": "Small models make high-volume AI cheap",
+      "title": "Small models make high-volume AI cheap",
+      "tags": ["Opportunity", "Pricing"],
+      "body": "Claude Haiku 5.5 (7 Oct) costs $0.10 / $0.50 per million input/output tokens. Gemini 4 Argon is $2 / $10, cached inputs 95% off, temporary launch discount.",
+      "soWhat": "Route routine work to small models. Write price step-down clauses so you benefit when list prices fall.",
+      "sources": [5, 6, 7, 8],
+      "reported": false
+    },
+    {
+      "name": "The model is the cheap part",
+      "title": "The model is the cheap part",
+      "tags": ["Pricing"],
+      "body": "Integration, compliance and monitoring cost $5–$10 for every $1 spent on models. 45% of IT leaders have low or no confidence in calculating AI costs.",
+      "soWhat": "Build business cases on total cost of ownership, not token price.",
+      "sources": [5, 6, 7, 8],
+      "reported": false
+    },
+    {
+      "name": "Agent safety is now a contract issue",
+      "title": "Agent safety is now a contract issue",
+      "tags": ["Risk"],
+      "body": "Anthropic cut internal agent tests off from the live internet after agents misused real websites. OpenAI publishes a log of unwanted model behaviour. Microsoft's CEO called for an emergency stop a human can pull, logs the AI cannot edit, and no model grading its own work.",
+      "soWhat": "Add human override, tamper-proof logs, permission scoping and incident-notification timelines to RFPs.",
+      "sources": [5, 6, 7, 8],
+      "reported": false
+    },
+    {
+      "name": "Adoption up, spend cooling, chip stocks wobbling",
+      "title": "Adoption up, spend cooling, chip stocks wobbling",
+      "tags": ["Supply", "Risk"],
+      "body": "Ramp's October index puts paid AI adoption at 55.9% of US businesses, but token spend has barely grown in two months. AI chip stocks shed over $1 trillion in the week of 12 Oct; CoreWeave's debt is under scrutiny.",
+      "soWhat": "Check the financial health of AI and GPU-cloud suppliers; ask for data portability, escrow and step-in rights.",
+      "sources": [5, 6, 7, 8],
+      "reported": false
+    }
+  ],
+  "modelPrices": [
+    { "model": "Claude Haiku 5.5", "input": 0.1, "output": 0.5, "note": "Requests up to 100k tokens" },
+    { "model": "Gemini 4 Argon", "input": 2, "output": 10, "note": "Cached input 95% off; launch discount temporary" }
+  ],
+  "vendorRiskNote": "Risk ratings are an editorial judgement.",
+  "vendors": [
+    {
+      "vendor": "Microsoft",
+      "risk": "High",
+      "changed": "New Copilot (25 Sep): Office chat stays per-user; agent work billed in Copilot Credits. New agents join your spending policy by default.",
+      "exposure": "Uncapped consumption on top of E3/E5",
+      "lever": "Set admin spend limits first; pre-paid credit pools at a discount; small pilot group",
+      "reported": false
+    },
+    {
+      "vendor": "Broadcom / VMware",
+      "risk": "High",
+      "changed": "Licence-included Azure VMware Solution phased out; existing customers have until Aug 2027 to bring their own VCF licence. Gartner cites typical increases of 300–400%.",
+      "exposure": "Renewal shock; forced re-platforming",
+      "lever": "Price a migration (Nutanix, Proxmox, OpenShift, Hyper-V, public cloud) to create leverage",
+      "reported": true,
+      "reportedNote": "Gartner VMware uplift figure: reported."
+    },
+    {
+      "vendor": "Dell / HP / Lenovo / HPE",
+      "risk": "High",
+      "changed": "Memory-driven price rises continue into Q4; enterprise SSD increases accelerating",
+      "exposure": "Refresh budgets overrun",
+      "lever": "Pull orders forward; fix prices on framework deals; extend refresh cycles",
+      "reported": false
+    },
+    {
+      "vendor": "Google",
+      "risk": "Medium",
+      "changed": "Gemini agent in preview; Gems become \"skills\" (retired on Workspace Business/Enterprise no sooner than 1 Mar 2027); Argon GA with temporary discount",
+      "exposure": "Expiring launch prices; migration effort",
+      "lever": "Lock launch pricing 12–24 months; agent identity and spend-cap terms in writing",
+      "reported": false
+    },
+    {
+      "vendor": "OpenAI",
+      "risk": "Medium",
+      "changed": "GPT-6 on every ChatGPT plan (Sol paid, Luna Free/Go). Eight US states filed consumer-protection suits on 14 Oct",
+      "exposure": "Legal exposure; shadow use of free tiers",
+      "lever": "Move staff to an enterprise plan; require indemnities and no training on your data",
+      "reported": false
+    },
+    {
+      "vendor": "SAP / Workday / ServiceNow",
+      "risk": "Medium",
+      "changed": "Reported: moves to AI tiers and token pools; SAP reported to restrict third-party agents on its APIs",
+      "exposure": "Your agents blocked from your own data",
+      "lever": "Contract explicit API and data-access rights for third-party agents",
+      "reported": true
+    },
+    {
+      "vendor": "Salesforce",
+      "risk": "Watch",
+      "changed": "Agentforce sold per action, via Flex Credits, or per user",
+      "exposure": "Three models, hard to compare",
+      "lever": "Model all three on real volumes; cap overage rates",
+      "reported": false
+    },
+    {
+      "vendor": "Anthropic",
+      "risk": "Opportunity",
+      "changed": "Haiku 5.5 at $0.10/$0.50; usage policy update effective 12 Nov; $100M Frontier Academy for implementation engineers",
+      "exposure": "Policy changes on permitted use",
+      "lever": "Use falling unit prices to renegotiate commitments; ask for implementation support",
+      "reported": false
+    }
+  ],
+  "plays": [
+    {
+      "id": "P1", "title": "Guardrails on consumption pricing", "urgency": "Now", "why": "Credits and tokens turn fixed costs variable",
+      "actions": ["Hard spend caps; alerts at 50/80/100%; agents stop rather than bill overage", "Pre-paid pools with rollover; fixed overage rates", "Monthly line-item usage reporting"]
+    },
+    {
+      "id": "P2", "title": "Pull hardware buys forward", "urgency": "Now", "why": "Memory prices rising; supply tight into 2027",
+      "actions": ["Lock Q4/Q1 pricing on framework agreements", "Extend healthy-device refresh by 6–12 months", "Memory pass-through formulas in writing"]
+    },
+    {
+      "id": "P3", "title": "Run a VMware exit cost model", "urgency": "Now", "why": "A credible alternative is the only lever that works",
+      "actions": ["Price two alternatives incl. migration effort", "Plan 8–12 weeks mid-size, 6+ months enterprise", "Start before the renewal window"]
+    },
+    {
+      "id": "P4", "title": "Stay model-agnostic", "urgency": "This quarter", "why": "The best model changes every few weeks",
+      "actions": ["Prefer multi-model platforms", "12-month terms for AI-specific commitments", "Price step-down tied to list price"]
+    },
+    {
+      "id": "P5", "title": "M&A protection in contracts", "urgency": "This quarter", "why": "Tech M&A up 38% this year",
+      "actions": ["Change-of-control: terminate or freeze price", "Cap annual uplifts (CPI or 3–5%)", "Track PE-owned and target vendors"]
+    },
+    {
+      "id": "P6", "title": "Agent terms in AI contracts", "urgency": "This quarter", "why": "Agents act alone and can overreach",
+      "actions": ["Human override; tamper-proof logs", "Least-privilege permissions; incident-notification SLAs", "No training on inputs; clear data residency"]
+    },
+    {
+      "id": "P7", "title": "Secure data and API rights", "urgency": "At renewal", "why": "Some SaaS vendors restrict third-party agents",
+      "actions": ["Contracted API access for any agent", "Bulk export formats and exit assistance"]
+    },
+    {
+      "id": "P8", "title": "Prepare for Malaysia's AI law", "urgency": "By Q1 2027", "why": "Covers AI used by Malaysian deployers, wherever hosted",
+      "actions": ["Inventory AI systems incl. features inside SaaS", "Ask vendors for risk assessments and incident-reporting support", "Compliance-cooperation clauses in new contracts"]
+    }
+  ],
+  "calendar": [
+    { "label": "Q4 2026", "date": null, "text": "Memory contract prices rise again (DRAM +10–15%, NAND +15–20%). Lock hardware pricing." },
+    { "label": "12 Nov 2026", "date": "2026-11-12", "text": "Anthropic usage policy update takes effect. Check internal use cases fit." },
+    { "label": "Nov–Dec 2026", "date": "2026-11-01", "text": "Malaysia AI Governance Bill expected in Parliament. Start the AI inventory." },
+    { "label": "1 Dec 2026", "date": "2026-12-01", "text": "Review Microsoft 365 Copilot agent and spending settings (partner guidance)." },
+    { "label": "1 Mar 2027", "date": "2027-03-01", "text": "Gemini Gems retired on Workspace Business/Enterprise (no sooner than). List Gems, assign owners." },
+    { "label": "Aug 2027", "date": "2027-08-01", "text": "Azure VMware Solution customers must move to bring-your-own VCF licensing." }
+  ],
+  "region": {
+    "johorMW": { "operational": 1110, "construction": 602, "planning": 2486, "total": 4198 },
+    "johorLabel": "Johor data-centre capacity, H1 2026 (MW)",
+    "johorSource": "Cushman & Wakefield",
+    "malaysiaMW": { "2025": 900, "2026f": 2055 },
+    "malaysiaLabel": "Malaysia operational capacity (MW)",
+    "malaysiaSource": "JLL",
+    "points": [
+      "MITI expects Johor to host 60% of Malaysia's data-centre capacity by 2030.",
+      "Johor set up a Special Technical Committee to vet new data centres on water, electricity and site suitability, and says it will favour green, renewable-powered projects."
+    ],
+    "soWhat": "Colocation supply is growing fast. Play providers against each other, but contract power-delivery dates, renewable-sourcing evidence and expansion headroom.",
+    "bill": [
+      { "label": "Consultation opened", "date": "10 Jul 2026", "done": true },
+      { "label": "Consultation closed", "date": "31 Jul 2026", "done": true },
+      { "label": "Cabinet submission", "date": "~end Jul 2026", "done": true },
+      { "label": "Parliament", "date": "Nov–Dec 2026", "done": false }
+    ],
+    "billSummary": "Proposed by the National AI Office. Creates a Central AI Authority (AI safety; investigation & enforcement; AI enablement/sandboxes), five governance principles (human dignity and agency, proportionate transparency, accountability and redress, safety and resilience, responsible data governance), risk-based obligations and AI incident reporting. Applies to AI used by a deployer established in Malaysia regardless of where it is hosted; exemptions only for personal use and national security.",
+    "billSoWhat": "Your organisation is a \"deployer\". Vendor contracts should commit suppliers to support assessments and incident reporting."
+  },
+  "glossary": [
+    { "term": "Token", "def": "A chunk of text (~¾ of a word). AI APIs price per million tokens; output costs more than input." },
+    { "term": "Agent / agentic AI", "def": "AI that carries out multi-step tasks on its own (sending emails, updating records) rather than just answering." },
+    { "term": "Inference vs training", "def": "Training builds a model; inference runs it. Enterprises mostly pay for inference." },
+    { "term": "RAG", "def": "Retrieval-augmented generation: the AI looks up your documents first, then answers from them." },
+    { "term": "Small language model", "def": "A smaller, cheaper, faster model for routine high-volume work; some run on a laptop." },
+    { "term": "Context caching", "def": "Reusing input the model has already processed, billed at a large discount." },
+    { "term": "Credits", "def": "A vendor's own metering currency (Copilot Credits, Flex Credits). Convert to cost per task to compare." },
+    { "term": "MCP", "def": "Model Context Protocol: an open standard for connecting AI tools to systems and data. A lock-in hedge." },
+    { "term": "HBM", "def": "High-bandwidth memory used in AI chips; its demand is why ordinary server/PC memory is scarce." },
+    { "term": "Outcome-based pricing", "def": "Paying per result (resolved ticket, processed invoice). Needs a tight contractual definition of \"outcome\"." }
+  ],
+  "quiz": [
+    {
+      "q": "Microsoft's new Copilot bills agent work how?",
+      "options": ["Per user, same as chat", "By usage, in Copilot Credits", "Free with E5", "Flat fee per agent"],
+      "answer": 1,
+      "explain": "Chat in Office apps stays per-user; agentic work is billed by usage in Copilot Credits."
+    },
+    {
+      "q": "Which way are memory prices heading in Q4 2026?",
+      "options": ["Falling 10%", "Flat", "Rising: DRAM +10–15%, NAND +15–20%", "Rising only for consumer PCs"],
+      "answer": 2,
+      "explain": "TrendForce projects further increases driven by AI servers, with tight supply into 2027."
+    },
+    {
+      "q": "Malaysia's AI Governance Bill covers AI used by a Malaysian deployer…",
+      "options": ["Only if hosted in Malaysia", "Only in government", "Regardless of where it is hosted", "Only high-risk medical AI"],
+      "answer": 2,
+      "explain": "Scope is based on use in Malaysia, so foreign cloud AI used here is covered."
+    },
+    {
+      "q": "For every $1 of AI model spend, integration, compliance and monitoring cost about…",
+      "options": ["$0.10", "$1", "$5–$10", "$50"],
+      "answer": 2,
+      "explain": "Total cost of ownership is dominated by everything around the model."
+    },
+    {
+      "q": "What creates the most leverage at a VMware renewal?",
+      "options": ["Asking for a discount", "A priced, credible migration plan", "Signing early", "Buying more cores"],
+      "answer": 1,
+      "explain": "A costed alternative is the lever that changes the conversation."
+    }
+  ],
+  "sources": [
+    { "title": "Please Advise: Deal Sheet, 16 Oct 2026", "url": "https://nonbindingthoughts.substack.com/p/please-advise-deal-sheet-oct-16-2026" },
+    { "title": "Dealroom: Recent M&A Deals 2026", "url": "https://dealroom.net/blog/recent-m-a-deals" },
+    { "title": "Intellizence: M&A Tracker 2026", "url": "https://intellizence.com/insights/merger-and-acquisition/largest-merger-acquisition-deals/" },
+    { "title": "TechCrunch: Mergers and Acquisitions", "url": "https://techcrunch.com/tag/mergers-and-acquisitions/" },
+    { "title": "AI News for 16 Oct 2026", "url": "https://aisdg.substack.com/p/ai-news-for-october-16-2026" },
+    { "title": "AI Weekly, 15 Oct 2026", "url": "https://aiweekly.co/ai-news-today/edition/2026-10-15" },
+    { "title": "AI to ROI, 16 Oct 2026", "url": "https://ai2roi.substack.com/p/ai-to-roi-news-and-analysis-october-c69" },
+    { "title": "Hello Growth: AI news October 2026", "url": "https://hellogrowth.ai/en/blog/ai-news-october-2026" },
+    { "title": "Deloitte: SaaS and AI agents (TMT Predictions 2026)", "url": "https://www.deloitte.com/us/en/insights/industry/technology/technology-media-and-telecom-predictions/2026/saas-ai-agents.html" },
+    { "title": "Generative AI upends enterprise software licensing", "url": "https://letsdatascience.com/news/generative-ai-upends-enterprise-software-licensing-models-f620b093" },
+    { "title": "HatchWorks: When AI agents become the buyer", "url": "https://hatchworks.com/blog/ai-agents/ai-agents-become-the-buyer/" },
+    { "title": "Thomas Hicks on Gartner AI contracting (LinkedIn)", "url": "https://no.linkedin.com/in/thomasjhicks" },
+    { "title": "TrendForce Q4 2026 DRAM outlook (Communications Today)", "url": "https://www.communicationstoday.co.in/?p=424298" },
+    { "title": "Techzine: Microsoft discontinuing VMware licences within Azure", "url": "https://www.techzine.eu/news/infrastructure/143729/microsoft-is-discontinuing-vmware-licenses-within-azure/" },
+    { "title": "Leaving VMware in 2026: cost model", "url": "https://dev.to/mr_manushukla/leaving-vmware-in-2026-the-7-step-cost-model-to-run-before-your-broadcom-renewal-2go6" },
+    { "title": "Cloudmagazin: VMware migration timelines", "url": "https://www.cloudmagazin.com/en/2026/03/18/vmware-broadcom-kostenfalle-2026-alternativen-proxmox-nutanix/" },
+    { "title": "EdgeProp: Johor leads APAC data centre boom (C&W)", "url": "https://edgeprop.my/content/1917257/johor-leads-apac-data-centre-boom-malaysia-tops-construction-—-cw" },
+    { "title": "NST: Johor tops Malaysia's data centre hubs (JLL)", "url": "https://www.nst.com.my/amp/business/corporate/2026/04/1428282/johor-tops-malaysias-leading-data-centre-hub" },
+    { "title": "The Edge: Knight Frank Data Centre Atlas 2026", "url": "https://theedgemalaysia.com/node/812609" },
+    { "title": "The Sun: Johor to host 60% of capacity by 2030", "url": "https://thesun.my/news/malaysia-news/johor-to-host-60-of-malaysia-s-total-data-centre-capacity-by-2030-tengku-zafrul-le14238366/" },
+    { "title": "The Sun: Johor attracted 50 data centres", "url": "https://thesun.my/local-news/johor-attracted-50-data-centres-in-the-past-two-years-onn-hafiz-AD12665207" },
+    { "title": "Access Partnership: Malaysia's AI Governance Bill", "url": "https://accesspartnership.com/opinion/malaysias-proposed-ai-governance-bill-weigh-in-before-the-window-closes/" },
+    { "title": "W.Media: Malaysia to enact AI law", "url": "https://w.media/malaysia-to-enact-ai-law/" }
+  ],
+  "footer": "Prepared 17 Oct 2026 for internal procurement planning. Not legal or financial advice. Figures change quickly; refresh monthly."
+};
+
+function renderPage(d) {
+ const e = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const slug = v => String(v).toLowerCase().replace(/[^a-z0-9]+/g,'-');
+ const tags = a => `<div class="tags">${a.map(t=>`<span class="tag ${slug(t)}">${e(t)}</span>`).join('')}</div>`;
+ const severity = s => `<span class="severity ${slug(s)}">${e(s)}</span>`;
+ const src = nums => `<div class="source-line">Sources ${nums.map(n=>`<a href="#source-${n}" aria-label="Go to source ${n}">[${n}]</a>`).join(' ')}</div>`;
+ const so = text => `<div class="so-what"><strong>So what for procurement</strong><p>${e(text)}</p></div>`;
+ const head = (n,title,intro,count='') => `<div class="section-head"><div class="section-heading"><span class="section-number">${n}</span><div><h2>${title}</h2>${intro?`<p class="section-intro">${intro}</p>`:''}</div></div>${count?`<span class="section-count">${count}</span>`:''}</div>`;
+ const cards = (arr,type) => `<div class="cards-grid">${arr.map((a,i)=>`<article class="news-card"><div class="card-top"><span class="card-index">${type} / ${String(i+1).padStart(2,'0')}</span>${a.reported?'<span class="reported-label">Includes reported items</span>':''}</div><h3 class="card-title">${e(a.name || a.title)}</h3>${tags(a.tags)}<p class="card-body">${e(a.body)}</p>${so(a.soWhat)}${src(a.sources || (type==='DEAL'?[1,2,3,4]:[5,6,7,8]))}</article>`).join('')}</div>`;
+ const date = new Date(d.asOf + 'T00:00:00Z');
+ const asOfLabel = date.toLocaleDateString('en-GB', {day:'numeric',month:'short',year:'numeric',timeZone:'UTC'});
+ const editionLabel = date.toLocaleDateString('en-GB', {month:'long',year:'numeric',timeZone:'UTC'});
+ const johor = d.region.johorMW, malaysia = d.region.malaysiaMW;
+ const johorTotal = johor.operational + johor.construction + johor.planning;
+ const n = value => Number(value).toLocaleString('en-US');
+ const nav = [['cover','Overview'],['numbers','Numbers'],['signals','Signals'],['deals','Deal flow'],['ai','AI & GenAI'],['vendors','Vendor watch'],['playbook','Playbook'],['calendar','Calendar'],['malaysia','Malaysia'],['learn','Learn'],['sources','Sources'],['notes','Notes']];
+ const signalTags = [['Pricing','Risk'],['Supply','Pricing'],['Lock-in','Pricing'],['Risk'],['Opportunity','Pricing']];
+ const chartLabel = d.dealChart.map(a=>`${a.name}: ${a.valueLabel || a.valueB}, ${a.status}`).join('; ');
+ return `
+<a class="skip-link" href="#main">Skip to briefing</a>
+<header id="cover" class="shell">
+ <div class="topbar"><a class="brand" href="#cover" aria-label="Procurement Tech Radar home"><span class="brand-symbol" aria-hidden="true"><i></i><i></i><i></i></span><span class="brand-caption">The procurement briefing</span></a><div class="top-actions"><span class="top-edition">${e(editionLabel)}</span><button id="print-button" class="print-button" type="button"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4V9h16v9h-2M6 14h12v7H6z"/></svg> Print briefing</button><button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.5 13.1A8.5 8.5 0 0 1 10.9 3.5a8.5 8.5 0 1 0 9.6 9.6Z"/></svg></button></div></div>
+ <div class="hero"><div class="hero-copy"><div class="eyebrow">Technology, AI & the way we buy</div><h1 class="hero-title">Procurement<br><span class="title-accent">Tech Radar<span class="title-dot">.</span></span></h1><p class="hero-description">${e(d.description)}</p><div class="meta-chips"><span class="snapshot">As of ${e(asOfLabel)}</span><span>Global + Malaysia</span><a href="#sources">${d.sources.length} sources <span aria-hidden="true">↗</span></a></div></div>
+ <article class="cover-story"><div class="cover-kicker"><span class="cover-number">01</span><span>The commercial shift</span><a href="#signals" aria-label="Read all five market signals">Explore signals <span aria-hidden="true">↗</span></a></div><h2 class="cover-headline">${e(d.signals[0].title)}</h2><div class="commercial-flow" aria-label="Market move: seats to credits. Commercial exposure: uncapped consumption. Sourcing play: guardrails on consumption pricing."><div class="flow-step"><span class="flow-label">Market move</span><span class="flow-value">Seats <span aria-hidden="true">→</span> credits</span></div><span class="flow-arrow" aria-hidden="true">→</span><div class="flow-step"><span class="flow-label">Commercial exposure</span><span class="flow-value">Uncapped<br>consumption</span></div><span class="flow-arrow" aria-hidden="true">→</span><a class="flow-step flow-action" href="#P1"><span class="flow-label">Your next play</span><span class="flow-value">Guardrails on<br>consumption pricing <span aria-hidden="true">↗</span></span></a></div><p class="cover-detail">${e(d.signals[0].detail)}</p><div class="cover-takeaway"><strong>So what for procurement</strong><p>${e(d.signals[0].soWhat)}</p></div></article></div>
+ <section id="numbers" class="kpi-strip" aria-label="Six headline figures">${d.kpis.map(k=>`<article class="kpi"><h2 class="kpi-label">${e(k.label)}</h2><div class="kpi-value">${e(k.value).replace(' / M tokens','<small class="kpi-unit"> / M tokens</small>').replace(' MW','<small class="kpi-unit"> MW</small>')}</div><div class="kpi-bottom"><span class="delta ${e(k.deltaType)}">${e(k.delta)}</span><span>${e(k.sub)}</span></div></article>`).join('')}</section>
+</header>
+<nav class="section-nav" aria-label="Briefing sections"><div class="nav-inner shell">${nav.map(([id,name],i)=>`<a href="#${id}" ${i===0?'class="active" aria-current="location"':''}>${name}</a>`).join('')}</div></nav>
+<main id="main" class="shell">
+ <section id="signals" class="briefing-section">${head('01','The signal board','Five shifts shaping your next sourcing decision.','Executive summary')}
+ <div class="signal-layout"><article class="lead-signal"><div class="signal-top"><span class="signal-index">01 / Lead signal</span>${severity(d.signals[0].severity)}</div><h3>${e(d.signals[0].title)}</h3>${tags(signalTags[0])}<p>${e(d.signals[0].detail)}</p>${so(d.signals[0].soWhat)}<a class="signal-play-link" href="#P1">Run play P1 <span aria-hidden="true">↗</span></a></article><div class="signal-list">${d.signals.slice(1).map((s,i)=>`<article class="signal-row"><div class="signal-top"><span class="signal-index">${String(i+2).padStart(2,'0')}</span>${severity(s.severity)}</div><div class="signal-context"><h3>${e(s.title)}</h3>${tags(signalTags[i+1])}<p>${e(s.detail)}</p></div>${so(s.soWhat)}</article>`).join('')}</div></div>
+ <div class="legend"><span>Read the impact</span>${tags(['Pricing','Lock-in','Supply','Risk','Opportunity'])}</div>${src([5,6,9,13,22,23])}</section>
+ <section id="deals" class="briefing-section">${head('02','Market pulse & deal flow','Deal flow, concentration risk, and the terms to protect.','Market pulse')}
+ <div class="panel deal-chart"><div class="panel-head"><h3>A big month for bigger platforms</h3><span>Deal value · US$ billions</span></div><div class="chart-body" role="img" aria-label="${e(chartLabel)}. All bars use a linear scale from 0 to 25 US$ billion.">${d.dealChart.map(a=>`<div class="bar-row"><div class="bar-label">${e(a.name)}<small>${e(a.status)}</small></div><div class="bar-track"><div class="bar-fill ${/reported/i.test(a.status)?'reported':''}" style="width:${a.valueB/25*100}%"></div><span class="bar-value" style="left:${a.valueB/25*100}%">${e(a.valueLabel || a.valueB)}</span></div></div>`).join('')}<div class="bar-axis"><span>0</span><span>5</span><span>10</span><span>15</span><span>20</span><span>25</span></div></div><p class="chart-note">Also: Cloudflare acquired Deno (undisclosed), 10 Oct 2026.</p></div>
+ ${cards(d.deals,'DEAL')}${src([1,2,3,4])}</section>
+ <section id="ai" class="briefing-section">${head('03','AI & GenAI trends','The trends changing cost, control, and contract terms.','AI & GenAI')}${cards(d.trends,'TREND')}
+ <div class="panel prices-panel"><div class="panel-head"><h3>Model price check</h3><span>US$ per million tokens</span></div><div class="table-wrap" tabindex="0" role="region" aria-label="Model prices, scroll horizontally"><table><caption class="sr-only">Model prices in US dollars per million tokens</caption><thead><tr><th scope="col">Model</th><th scope="col" class="number">Input</th><th scope="col" class="number">Output</th><th scope="col">Note</th></tr></thead><tbody>${d.modelPrices.map(m=>`<tr><th scope="row">${e(m.model)}</th><td class="number">$${Number(m.input).toFixed(2)}</td><td class="number">$${Number(m.output).toFixed(2)}</td><td>${e(m.note)}</td></tr>`).join('')}</tbody></table></div></div>${src([5,6,7,8,9,10,11,12])}</section>
+ <section id="vendors" class="briefing-section">${head('04','Vendor watch','Eight vendor positions to revisit before your next negotiation.','Vendor watch')}<p class="editorial-note">Risk ratings are an editorial judgement. Secondary commentary is labelled “reported”.</p>
+ <div class="table-wrap panel" tabindex="0" role="region" aria-label="Vendor watch, scroll horizontally"><table class="vendor-table"><caption class="sr-only">Vendor risks, changes, exposure and negotiation levers</caption><thead><tr><th scope="col">Vendor</th><th scope="col">Risk</th><th scope="col">What changed</th><th scope="col">Exposure</th><th scope="col">Negotiation lever</th></tr></thead><tbody>${d.vendors.map(v=>`<tr><th scope="row">${e(v.vendor)}</th><td>${severity(v.risk)}</td><td>${e(v.changed)}${v.reportedNote?`<small class="reported-note">${e(v.reportedNote)}</small>`:""}</td><td>${e(v.exposure)}</td><td>${e(v.lever)}</td></tr>`).join('')}</tbody></table></div>${src([5,6,7,8,9,10,12,13,14,15,16])}</section>
+ <section id="playbook" class="briefing-section">${head('05','Strategy playbook','Eight sourcing plays. Start with the three that need action now.','Strategy playbook')}<div class="plays-grid">${d.plays.map(p=>`<article class="play-card" id="${e(p.id)}"><div class="play-top"><span class="play-id">${e(p.id)}</span><span class="urgency ${p.urgency==='Now'?'now':''}">${e(p.urgency)}</span></div><h3>${e(p.title)}</h3><p class="play-why">${e(p.why)}</p><ul>${p.actions.map(a=>`<li>${e(a)}</li>`).join('')}</ul></article>`).join('')}</div>${src([9,10,12,13,14,15,16,22,23])}</section>
+ <section id="calendar" class="briefing-section">${head('06','Action calendar','Dates to plan around. Countdowns use your current local date.','Action calendar')}<div class="calendar-list">${d.calendar.map(c=>`<article class="calendar-row"><div class="calendar-date">${e(c.label)}</div><p class="calendar-text">${e(c.text)}</p><span class="countdown" ${c.date?`data-countdown="${e(c.date)}"`:''}>${c.date?'Calculating…':'in effect'}</span></article>`).join('')}</div>${src([5,6,8,13,14,22,23])}</section>
+ <section id="malaysia" class="briefing-section">${head('07','Malaysia & ASEAN','Capacity is coming. Governance is catching up.','Malaysia & ASEAN lens')}<div class="region-grid"><article class="panel capacity-panel"><div class="panel-head"><h3>Johor’s capacity pipeline</h3><span>H1 2026 · MW</span></div><div class="capacity-total"><strong>${n(johorTotal)}<span> MW</span></strong><p>Operational + pipeline</p></div><div class="stacked-bar" role="img" aria-label="Johor data-centre capacity: operational ${n(johor.operational)} MW, under construction ${n(johor.construction)} MW, planning ${n(johor.planning)} MW. Total ${n(johorTotal)} MW."><span class="stack-segment operational" style="width:${johor.operational/johorTotal*100}%"></span><span class="stack-segment construction" style="width:${johor.construction/johorTotal*100}%"></span><span class="stack-segment planning" style="width:${johor.planning/johorTotal*100}%"></span></div><dl class="stack-legend"><div><dt><i class="operational"></i>Operational</dt><dd>${n(johor.operational)} MW</dd></div><div><dt><i class="construction"></i>Under construction</dt><dd>${n(johor.construction)} MW</dd></div><div><dt><i class="planning"></i>Planning</dt><dd>${n(johor.planning)} MW</dd></div></dl><p class="chart-note">Cushman & Wakefield</p><div class="malaysia-capacity"><h3>Malaysia operational capacity</h3><div role="img" aria-label="Malaysia operational capacity: end-2025 ${n(malaysia['2025'])} MW; end-2026 forecast ${n(malaysia['2026f'])} MW. Both bars use a linear scale from 0 to 2,500 MW.">${[['End-2025',malaysia['2025']],['End-2026 forecast',malaysia['2026f']]].map(([label,value])=>`<div class="capacity-row"><div><span>${label}</span><strong>${value.toLocaleString('en-US')} MW</strong></div><div class="bar-track"><div class="bar-fill" style="width:${value/2500*100}%"></div></div></div>`).join('')}<div class="capacity-axis"><span>0</span><span>1,250</span><span>2,500 MW</span></div></div><p class="chart-note">JLL</p></div><ul class="region-points">${d.region.points.map(p=>`<li>${e(p)}</li>`).join('')}</ul>${so(d.region.soWhat)}${src([17,18,19,20,21])}</article>
+ <article class="panel bill-panel"><div class="panel-head"><h3>AI Governance Bill</h3><span class="severity medium">Next: Parliament</span></div><ol class="bill-steps">${d.region.bill.map(b=>`<li class="bill-step ${b.done?'done':'next'}"><span class="step-mark" aria-hidden="true">${b.done?'✓':'→'}</span><div><strong>${e(b.label)}${b.done?'<span class="sr-only"> — completed</span>':' (next)'}</strong><span>${e(b.date)}</span></div></li>`).join('')}</ol><p class="bill-summary">${e(d.region.billSummary)}</p>${so(d.region.billSoWhat)}${src([22,23])}</article></div></section>
+ <section id="learn" class="briefing-section">${head('08','Learning centre','Ten terms to know. Five questions to test your judgement.','Learn')}<div class="learn-grid"><div class="glossary-list"><div class="panel-head"><h3>The procurement glossary</h3><span>10 terms</span></div>${d.glossary.map((g,i)=>`<details><summary><span class="glossary-index">${String(i+1).padStart(2,'0')}</span>${e(g.term)}<span class="glossary-plus" aria-hidden="true">+</span></summary><p>${e(g.def)}</p></details>`).join('')}</div><div id="quiz" class="quiz-panel" aria-label="Five-question knowledge check"><noscript>Enable JavaScript to take the five-question quiz.</noscript></div></div></section>
+ <section id="sources" class="briefing-section">${head('09','Sources',`The ${d.sources.length} sources supplied with this briefing.`,'Source register')}<ol class="sources-grid">${d.sources.map((s,i)=>`<li id="source-${i+1}"><a href="${e(s.url)}" target="_blank" rel="noopener noreferrer"><span class="source-number">${String(i+1).padStart(2,'0')}</span><span>${e(s.title)}</span><span aria-hidden="true">↗</span></a></li>`).join('')}</ol></section>
+</main>
+<footer id="notes"><div class="footer-inner shell"><div><a class="footer-brand" href="#cover">Procurement Tech Radar<span>.</span></a><p>${e(d.footer)}</p></div><a class="back-top" href="#cover">Back to top <span aria-hidden="true">↑</span></a></div></footer>
+<noscript><div class="noscript-note">This briefing is readable without JavaScript. Enable JavaScript for theme controls, live countdowns, and the quiz.</div></noscript>`;
+}
+document.getElementById('briefing-root').innerHTML = renderPage(RADAR_DATA);
+(() => {
+ 'use strict';
+ const html = document.documentElement;
+ const themeButton = document.getElementById('theme-toggle');
+ const media = window.matchMedia('(prefers-color-scheme: dark)');
+ let themePreference = null;
+ try { themePreference = localStorage.getItem('ptr-theme'); } catch (_) {}
+ function applyTheme(theme) {
+  html.dataset.theme = theme;
+  themeButton.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`);
+  themeButton.setAttribute('aria-pressed', String(theme === 'dark'));
+ }
+ applyTheme(themePreference === 'dark' || themePreference === 'light' ? themePreference : media.matches ? 'dark' : 'light');
+ themeButton.addEventListener('click', () => {
+  themePreference = html.dataset.theme === 'dark' ? 'light' : 'dark';
+  applyTheme(themePreference);
+  try { localStorage.setItem('ptr-theme', themePreference); } catch (_) {}
+ });
+ media.addEventListener?.('change', event => { if (!themePreference) applyTheme(event.matches ? 'dark' : 'light'); });
+ document.getElementById('print-button').addEventListener('click', () => window.print());
+ function countdownText(target, now = new Date()) {
+  const [year, month, day] = target.split('-').map(Number);
+  const current = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+  const days = Math.round((Date.UTC(year, month - 1, day) - current) / 86400000);
+  return days < 0 ? 'passed' : days === 0 ? 'today' : days === 1 ? 'tomorrow' : `in ${days} days`;
+ }
+ function updateCountdowns() {
+  document.querySelectorAll('[data-countdown]').forEach(element => {
+   element.textContent = countdownText(element.dataset.countdown);
+   element.classList.toggle('passed', element.textContent === 'passed');
+  });
+ }
+ updateCountdowns();
+ setInterval(updateCountdowns, 60000);
+ document.addEventListener('visibilitychange', () => { if (!document.hidden) updateCountdowns(); });
+ const questions = RADAR_DATA.quiz;
+ const quiz = document.getElementById('quiz');
+ let index = 0, score = 0, selected = null, results = [], finished = false;
+ const escape = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ function renderQuiz(focus = false) {
+  const progress = `<div class="quiz-progress" aria-label="${finished ? '5 of 5 questions completed' : `Question ${index + 1} of 5`}">${questions.map((_,i)=>`<span class="quiz-segment ${results[i] === true ? 'right' : results[i] === false ? 'wrong' : !finished && i === index ? 'current' : ''}"></span>`).join('')}</div>`;
+  if (finished) {
+   quiz.innerHTML = `<div class="quiz-kicker">KNOWLEDGE CHECK / COMPLETE</div>${progress}<div class="quiz-result-icon" aria-hidden="true">✓</div><h3 class="quiz-question" tabindex="-1">You scored ${score} of 5</h3><p class="quiz-result-copy">${score===5?'A clean sweep. Put these sourcing plays to work.':score>=3?'A strong foundation. Revisit the briefing and sharpen your next negotiation.':'Keep exploring the briefing. Every signal is another sourcing opportunity.'}</p><button class="button" id="quiz-restart" type="button">Restart quiz <span aria-hidden="true">↻</span></button>`;
+   document.getElementById('quiz-restart').addEventListener('click', () => { index=0;score=0;selected=null;results=[];finished=false;renderQuiz(true); });
+  } else {
+   const q = questions[index];
+   quiz.innerHTML = `<div class="quiz-header"><span class="quiz-kicker">KNOWLEDGE CHECK</span><span class="quiz-score">Score ${score} / 5</span></div>${progress}<p class="quiz-counter">QUESTION ${String(index+1).padStart(2,'0')} / 05</p><h3 class="quiz-question" tabindex="-1">${escape(q.q)}</h3><div class="quiz-options">${q.options.map((option,i)=>`<button type="button" class="quiz-option ${selected !== null ? i===q.answer?'correct':i===selected?'incorrect':'' : ''}" ${selected !== null?'disabled':''} data-answer="${i}"><span class="option-letter">${String.fromCharCode(65+i)}</span><span>${escape(option)}</span>${selected !== null && i === q.answer?'<span class="answer-icon">✓<span class="sr-only"> Correct answer</span></span>':selected === i && i !== q.answer?'<span class="answer-icon">×<span class="sr-only"> Your incorrect answer</span></span>':''}</button>`).join('')}</div><div id="quiz-feedback" class="quiz-feedback" aria-live="polite" aria-atomic="true">${selected !== null?`<strong>${selected===q.answer?'Correct.':'Not quite.'}</strong><p>${escape(q.explain)}</p>`:''}</div><div class="quiz-toolbar"><span>${selected === null?'Choose one answer to continue.':`${score} correct so far`}</span><button id="quiz-next" type="button" class="button" ${selected !== null?'aria-describedby="quiz-feedback"':''} ${selected===null?'disabled':''}>${index===questions.length-1?'See results':'Next question'} <span aria-hidden="true">→</span></button></div>`;
+   quiz.querySelectorAll('[data-answer]').forEach(button => button.addEventListener('click', () => {
+    if (selected !== null) return;
+    selected = Number(button.dataset.answer);
+    results[index] = selected === q.answer;
+    if (results[index]) score++;
+    renderQuiz();
+    document.getElementById('quiz-next').focus({preventScroll:true});
+   }));
+   document.getElementById('quiz-next').addEventListener('click', () => {
+    if (selected === null) return;
+    if (index === questions.length - 1) finished = true; else index++;
+    selected = null;renderQuiz(true);
+   });
+  }
+  if(focus) quiz.querySelector('.quiz-question').focus({preventScroll:true});
+ }
+ renderQuiz();
+ const navLinks = [...document.querySelectorAll('.section-nav a')];
+ const sections = navLinks.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+ let pending = false;
+ function updateActive() {
+  pending=false;
+  let current=sections[0];
+  for(const section of sections) { if(section.getBoundingClientRect().top <= 135) current=section; }
+  if(window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 10) current=sections.at(-1);
+  navLinks.forEach(link => {
+   const active=link.getAttribute('href') === `#${current.id}`;
+   link.classList.toggle('active',active);
+   if(active) link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');
+  });
+ }
+ window.addEventListener('scroll',()=>{if(!pending){pending=true;requestAnimationFrame(updateActive);}},{passive:true});
+ window.addEventListener('resize',updateActive);
+ updateActive();
+})();
+
+</script>
+</body>
+</html>
