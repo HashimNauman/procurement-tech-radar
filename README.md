@@ -2,6 +2,8 @@
 
 **Technology intelligence, translated into procurement action.**
 
+[Open the live briefing](https://hashimnauman.github.io/procurement-tech-radar/)
+
 A self-contained briefing for people buying technology and AI. Each market move connects to commercial exposure and a practical sourcing play, with a global view and a Malaysia/ASEAN lens.
 
 ![Procurement Tech Radar preview](preview.jpg)
